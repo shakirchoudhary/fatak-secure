@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0d1b4b;
+  --navy-deep: #060e2a;
+  --navy-mid: #12255e;
+  --orange: #FF6B35;
+  --orange-d: #e5521c;
+  --teal: #00C4B4;
+  --teal-l: #3DDDD0;
+  --gold: #F5B36D;
+  --cream: #FFF9F5;
+  --g50: #F8FAFC;
+  --g100: #F1F5F9;
+  --g200: #E2E8F0;
+  --g300: #CBD5E1;
+  --g400: #94A3B8;
+  --g500: #64748B;
+  --g600: #475569;
+  --g800: #1E293B;
+  --health: #0EA5E9;
+  --health-bg: #EFF9FF;
+  --health-d: #0369a1;
+  --life: #EC4899;
+  --life-bg: #FFF0F7;
+  --life-d: #9d174d;
+  --motor: #F59E0B;
+  --motor-bg: #FFFBEB;
+  --motor-d: #b45309;
+  --travel: #10B981;
+  --travel-bg: #ECFDF5;
+  --travel-d: #065f46;
+  --accident: #8B5CF6;
+  --accident-bg: #F5F3FF;
+  --cancer: #EF4444;
+  --cancer-bg: #FFF5F5;
+  --fh: 'Sora', sans-serif;
+  --fb: 'DM Sans', sans-serif;
+  --s1: 0 2px 12px rgba(13,27,75,.07);
+  --s2: 0 8px 32px rgba(13,27,75,.11);
+  --s3: 0 24px 64px rgba(13,27,75,.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--fb);
+  color: var(--navy);
+  background: #fff;
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Fade-up animation ── */
+.fu {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.fu.on {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── FAQ Accordion ── */
+.fa {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s;
+  padding: 0 20px;
+}
+.fa.open {
+  max-height: 500px;
+  padding: 0 20px 18px;
+}
+.fi.open .fic {
+  transform: rotate(45deg);
+}
+
+/* ── Glossary Alpha Nav ── */
+.gl-alpha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 32px;
+}
+.gl-alpha a {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--g50);
+  border: 1px solid var(--g200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--g600);
+  transition: all 0.2s;
+}
+.gl-alpha a:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+/* ── Calculator tabs ── */
+.calc-tab.on {
+  background: var(--navy);
+  color: #fff;
+}
+.calc-panel {
+  display: none;
+}
+.calc-panel.on {
+  display: block;
+}
+
+/* ── Quote result show ── */
+.cc-result {
+  display: none;
+}
+.cc-result.show {
+  display: block;
+}
+
+/* ── Dropdown menu ── */
+.dd:hover .dd-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.dd:hover .chev {
+  transform: rotate(180deg);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--g100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--g300);
+  border-radius: 3px;
+}
+
+/* ── OTP Input ── */
+.otp-box::-webkit-outer-spin-button,
+.otp-box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.otp-box {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
