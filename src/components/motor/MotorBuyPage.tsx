@@ -174,7 +174,7 @@ export default function MotorBuyPage() {
           {STEP_LABELS.map((_, i) => (
             <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${
               i < currentStep ? 'w-4 bg-motor-DEFAULT' :
-              i === currentStep ? 'w-7 bg-motor-DEFAULT' :
+              i === currentStep ? 'w-7 bg-motor-DEFAULT opacity-50' :
               'w-4 bg-slate-200'
             }`} />
           ))}

@@ -80,7 +80,7 @@ export default function MotorPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden bg-gradient-to-br from-[#2d1a00] via-[#4a2d00] to-[#6b3d00]">
+      <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1a00,#4a2d00,#6b3d00)' }}>
         <div className="absolute -top-36 -right-30 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(245,158,11,0.15),transparent_68%)] rounded-full pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:52px_52px] pointer-events-none" />
 
@@ -118,7 +118,7 @@ export default function MotorPage() {
               </button>
               <button
                 onClick={() => showPage('motor-buy')}
-                className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border-[1.5px] border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer"
               >
                 New Policy
               </button>
@@ -246,7 +246,7 @@ export default function MotorPage() {
               🚗 Renew Motor Insurance →
             </button>
             <button
-              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border-[1.5px] border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer"
               onClick={() => showPage('motor-buy')}
             >
               New Policy

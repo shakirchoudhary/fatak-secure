@@ -21,7 +21,7 @@ export default function HeroSection() {
   const { showPage } = usePage()
 
   return (
-    <section className="min-h-screen pt-[90px] pb-[72px] px-[5%] bg-gradient-to-br from-[#2A0D52] via-[#3B1370] to-[#5C1E9E] flex items-center relative overflow-hidden">
+    <section className="min-h-screen pt-[90px] pb-[72px] px-[5%] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2A0D52 0%,#3B1370 48%,#5C1E9E 100%)' }}>
       {/* Blobs */}
       <div className="absolute -top-44 -right-36 w-[680px] h-[680px] bg-[radial-gradient(circle,rgba(0,196,180,0.13),transparent_68%)] rounded-full pointer-events-none" />
       <div className="absolute -bottom-40 -left-30 w-[520px] h-[520px] bg-[radial-gradient(circle,rgba(255,107,53,0.1),transparent_68%)] rounded-full pointer-events-none" />

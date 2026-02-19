@@ -211,7 +211,7 @@ export default function HealthBuyPage() {
             <div
               key={i}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                i < currentStep ? 'w-5 bg-health-DEFAULT' :
+                i < currentStep ? 'w-5 bg-health-DEFAULT opacity-50' :
                 i === currentStep ? 'w-8 bg-health-DEFAULT' :
                 'w-5 bg-slate-200'
               }`}

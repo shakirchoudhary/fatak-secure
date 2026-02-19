@@ -26,7 +26,7 @@ export default function Button({
     primary:
       'bg-gradient-to-br from-orange-DEFAULT to-orange-dark text-white shadow-orange hover:shadow-orange-hover hover:-translate-y-0.5',
     ghost:
-      'bg-white/10 border border-white/[0.28] text-white hover:bg-white/[0.18] hover:border-white/50',
+      'bg-white/10 border-[1.5px] border-white/[0.28] text-white hover:bg-white/[0.18] hover:border-white/50',
   }
 
   const sizes = {

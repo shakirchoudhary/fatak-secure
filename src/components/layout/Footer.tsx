@@ -60,7 +60,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <button
                     onClick={() => showPage(item.page)}
-                    className="text-[13px] text-white/50 hover:text-white/90 transition-colors bg-transparent border-none cursor-pointer font-body text-left"
+                    className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors bg-transparent border-none cursor-pointer font-body text-left"
                   >
                     {item.label}
                   </button>
@@ -87,7 +87,7 @@ export default function Footer() {
                     href={item.href}
                     target={item.href !== '#' ? '_blank' : undefined}
                     rel={item.href !== '#' ? 'noopener noreferrer' : undefined}
-                    className="text-[13px] text-white/50 hover:text-white/90 transition-colors"
+                    className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors"
                   >
                     {item.label}
                   </a>
@@ -108,7 +108,7 @@ export default function Footer() {
                 'Fraud Safety',
               ].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-[13px] text-white/50 hover:text-white/90 transition-colors">
+                  <a href="#" className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors">
                     {item}
                   </a>
                 </li>
@@ -118,7 +118,7 @@ export default function Footer() {
                   href="https://fatakpay.com/site-map"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] text-white/50 hover:text-white/90 transition-colors"
+                  className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors"
                 >
                   Sitemap
                 </a>

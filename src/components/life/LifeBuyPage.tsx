@@ -186,7 +186,7 @@ export default function LifeBuyPage() {
         <div className="flex gap-1.5">
           {STEP_LABELS.map((_, i) => (
             <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${
-              i < currentStep ? 'w-4 bg-life-DEFAULT' :
+              i < currentStep ? 'w-4 bg-life-DEFAULT opacity-50' :
               i === currentStep ? 'w-7 bg-life-DEFAULT' :
               'w-4 bg-slate-200'
             }`} />

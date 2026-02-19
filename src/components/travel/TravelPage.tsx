@@ -94,7 +94,7 @@ export default function TravelPage() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <section style={{ background: 'linear-gradient(155deg,#002d1a,#003d24,#00562e)', padding: '72px 5% 56px' }}>
+      <section style={{ background: 'linear-gradient(155deg,#002d1a,#003d24,#004d2e)', padding: '72px 5% 56px' }}>
         <div className="max-w-[1180px] mx-auto grid grid-cols-[1fr_auto] gap-12 items-center">
           <div>
             <div className="text-[12px] text-white/50 mb-4">
@@ -126,7 +126,7 @@ export default function TravelPage() {
               >
                 Get Travel Quote →
               </button>
-              <button className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer">
+              <button className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border-[1.5px] border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer">
                 See Coverage
               </button>
             </div>
@@ -268,7 +268,7 @@ export default function TravelPage() {
             >
               ✈️ Get Travel Insurance →
             </button>
-            <button className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer">
+            <button className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border-[1.5px] border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer">
               See All Plans
             </button>
           </div>

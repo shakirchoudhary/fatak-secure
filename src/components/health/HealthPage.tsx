@@ -109,7 +109,7 @@ export default function HealthPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden bg-gradient-to-br from-[#2A0D52] via-[#3B1370] to-[#5C1E9E]">
+      <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2A0D52 0%,#3B1370 48%,#5C1E9E 100%)' }}>
         <div className="absolute -top-36 -right-30 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(14,165,233,0.15),transparent_68%)] rounded-full pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:52px_52px] pointer-events-none" />
 
@@ -337,7 +337,7 @@ export default function HealthPage() {
               ❤️‍🩹 Get Health Insurance →
             </button>
             <button
-              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border-[1.5px] border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer"
               onClick={() => showPage('health-buy')}
             >
               Compare Plans
