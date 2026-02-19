@@ -55,7 +55,7 @@ export default function ProductsGrid() {
       <div className="max-w-[1180px] mx-auto">
         <div className="text-center mb-13">
           <Tag centered noBar>Our Products</Tag>
-          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT mb-3">
+          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-3">
             Insurance for Every Need
           </h2>
           <p className="text-base text-slate-500 leading-[1.78] max-w-[520px] mx-auto">
@@ -83,7 +83,7 @@ export default function ProductsGrid() {
                   {product.emoji}
                 </div>
 
-                <h3 className="font-heading text-[18px] font-bold text-navy-DEFAULT mb-1.5">{product.title}</h3>
+                <h3 className="font-heading text-[18px] font-bold text-navy mb-1.5">{product.title}</h3>
                 <p className="text-[13px] text-slate-500 leading-[1.65] mb-3.5">{product.description}</p>
 
                 <ul className="flex flex-col gap-1.5 mb-4 list-none">
@@ -103,7 +103,7 @@ export default function ProductsGrid() {
                 <div className="mt-auto flex items-center justify-between pt-3.5 border-t border-slate-100">
                   <div>
                     <small className="text-[11px] text-slate-400 block">Starting at</small>
-                    <strong className="font-heading text-[19px] font-extrabold text-navy-DEFAULT">
+                    <strong className="font-heading text-[19px] font-extrabold text-navy">
                       {product.startingPrice}<span className="text-sm font-medium text-slate-400">{product.priceUnit}</span>
                     </strong>
                   </div>

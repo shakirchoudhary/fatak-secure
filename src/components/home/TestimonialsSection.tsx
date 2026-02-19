@@ -7,7 +7,7 @@ export default function TestimonialsSection() {
       <div className="max-w-[1180px] mx-auto">
         <div className="text-center mb-12">
           <Tag centered noBar>Real Stories</Tag>
-          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT mb-3">
+          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-3">
             When It Mattered Most,<br />FatakSecure Came Through
           </h2>
           <p className="text-base text-slate-500 leading-[1.78] max-w-[520px] mx-auto">
@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
                   {t.avatar}
                 </div>
                 <div>
-                  <div className="font-bold text-[13.5px] text-navy-DEFAULT">{t.name}</div>
+                  <div className="font-bold text-[13.5px] text-navy">{t.name}</div>
                   <div className="text-[11.5px] text-slate-400 mt-0.5">{t.location}</div>
                   <span
                     className="inline-block text-[10px] font-bold px-2 py-0.5 rounded-xl mt-0.5"

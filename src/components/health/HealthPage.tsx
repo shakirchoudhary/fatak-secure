@@ -120,8 +120,8 @@ export default function HealthPage() {
               <span className="text-white/25">›</span>
               <span className="text-white/70">Health Insurance</span>
             </div>
-            <div className="inline-flex items-center gap-2 bg-health-DEFAULT/[0.15] border border-health-DEFAULT/30 text-[#7DD3FC] text-xs font-semibold px-4 py-1.5 rounded-2xl mb-5">
-              <span className="w-[7px] h-[7px] bg-health-DEFAULT rounded-full animate-blink" />
+            <div className="inline-flex items-center gap-2 bg-health/[0.15] border border-health/30 text-[#7DD3FC] text-xs font-semibold px-4 py-1.5 rounded-2xl mb-5">
+              <span className="w-[7px] h-[7px] bg-health rounded-full animate-blink" />
               India's Most Trusted Health Plans
             </div>
             <h1 className="font-heading text-[clamp(32px,4.5vw,54px)] font-extrabold leading-[1.08] tracking-[-1.5px] text-white mb-4">
@@ -166,7 +166,7 @@ export default function HealthPage() {
               ))}
             </div>
             <button
-              className="w-full bg-gradient-to-br from-orange-DEFAULT to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200 text-sm"
+              className="w-full bg-gradient-to-br from-orange to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200 text-sm"
               onClick={() => showPage('health-buy')}
             >
               Check Your Premium →
@@ -181,7 +181,7 @@ export default function HealthPage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="text-center mb-12">
             <Tag color="health">Health Plans</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold text-navy-DEFAULT mb-3">
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold text-navy mb-3">
               Choose the Right Cover for You
             </h2>
             <p className="text-slate-500 max-w-[520px] mx-auto">
@@ -194,20 +194,20 @@ export default function HealthPage() {
                 key={plan.name}
                 className={`relative rounded-2xl border p-6 flex flex-col transition-all hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.09)] ${
                   plan.isPopular
-                    ? 'border-health-DEFAULT shadow-[0_8px_40px_rgba(14,165,233,0.15)]'
+                    ? 'border-health shadow-[0_8px_40px_rgba(14,165,233,0.15)]'
                     : 'border-slate-200'
                 }`}
               >
                 {plan.isPopular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-health-DEFAULT text-white text-[11.5px] font-bold px-3.5 py-1 rounded-full whitespace-nowrap shadow-sm">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-health text-white text-[11.5px] font-bold px-3.5 py-1 rounded-full whitespace-nowrap shadow-sm">
                     {plan.badge}
                   </div>
                 )}
                 <div className="text-[11px] font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--health)' }}>{plan.type}</div>
-                <div className="font-heading text-[20px] font-extrabold text-navy-DEFAULT mb-1">{plan.name}</div>
+                <div className="font-heading text-[20px] font-extrabold text-navy mb-1">{plan.name}</div>
                 <div className="text-[13px] text-slate-500 mb-4">{plan.desc}</div>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-heading text-[32px] font-extrabold text-navy-DEFAULT">{plan.price}</span>
+                  <span className="font-heading text-[32px] font-extrabold text-navy">{plan.price}</span>
                   <span className="text-[14px] text-slate-400">{plan.period}</span>
                   {plan.originalPrice && <span className="text-[13px] text-slate-400 line-through ml-2">{plan.originalPrice}</span>}
                 </div>
@@ -240,14 +240,14 @@ export default function HealthPage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="mb-11">
             <Tag color="health">Coverage Details</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT">What Does Health Insurance Cover?</h2>
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">What Does Health Insurance Cover?</h2>
             <p className="text-[16px] text-slate-500 leading-[1.78] mt-2 max-w-[520px]">Everything you need to know about your health cover.</p>
           </div>
           <div className="grid grid-cols-3 gap-5">
             {COVERAGE.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-[0_8px_28px_rgba(0,0,0,0.07)] transition-all">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style={{ background: 'var(--health-bg)' }}>{c.ico}</div>
-                <h4 className="font-heading font-bold text-[16px] text-navy-DEFAULT mb-2">{c.title}</h4>
+                <h4 className="font-heading font-bold text-[16px] text-navy mb-2">{c.title}</h4>
                 <p className="text-[13.5px] text-slate-500 leading-[1.65] mb-4">{c.desc}</p>
                 <span className="inline-block text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: 'var(--health-bg)', color: 'var(--health)' }}>{c.tag}</span>
               </div>
@@ -261,11 +261,11 @@ export default function HealthPage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="text-center mb-11">
             <Tag color="health">Policy Details</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT">Covered vs. Not Covered</h2>
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">Covered vs. Not Covered</h2>
           </div>
           <div className="grid grid-cols-2 gap-6">
             <div className="rounded-2xl p-7 border border-slate-200">
-              <h3 className="font-heading font-bold text-[18px] text-navy-DEFAULT mb-5">
+              <h3 className="font-heading font-bold text-[18px] text-navy mb-5">
                 <span style={{ color: '#10B981' }}>✅</span> What's Covered
               </h3>
               <ul className="space-y-3 list-none">
@@ -278,7 +278,7 @@ export default function HealthPage() {
               </ul>
             </div>
             <div className="rounded-2xl p-7 border border-slate-200">
-              <h3 className="font-heading font-bold text-[18px] text-navy-DEFAULT mb-5">
+              <h3 className="font-heading font-bold text-[18px] text-navy mb-5">
                 <span style={{ color: '#EF4444' }}>❌</span> Not Covered
               </h3>
               <ul className="space-y-3 list-none">
@@ -299,13 +299,13 @@ export default function HealthPage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="mb-10">
             <Tag color="teal">Why Choose Us</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT">India's Smartest Way to Buy Health Insurance</h2>
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">India's Smartest Way to Buy Health Insurance</h2>
           </div>
           <div className="grid grid-cols-3 gap-5">
             {WHY.map((w) => (
               <div key={w.title} className="p-5 rounded-2xl border border-slate-100 bg-white hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)] transition-all">
                 <div className="text-3xl mb-3">{w.ico}</div>
-                <h4 className="font-heading font-bold text-[15px] text-navy-DEFAULT mb-1.5">{w.title}</h4>
+                <h4 className="font-heading font-bold text-[15px] text-navy mb-1.5">{w.title}</h4>
                 <p className="text-[13px] text-slate-500 leading-[1.6]">{w.desc}</p>
               </div>
             ))}
@@ -317,7 +317,7 @@ export default function HealthPage() {
       <section className="py-[88px] px-[5%] bg-white">
         <div className="max-w-[700px] mx-auto">
           <Tag color="health">FAQ</Tag>
-          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT mb-8">Health Insurance FAQs</h2>
+          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-8">Health Insurance FAQs</h2>
           <FAQ items={FAQS} />
         </div>
       </section>

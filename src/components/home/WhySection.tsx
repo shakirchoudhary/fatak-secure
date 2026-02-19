@@ -30,7 +30,7 @@ export default function WhySection() {
         <div>
           <Tag color="teal">Why FatakSecure</Tag>
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-white mb-3">
-            Built for <span className="text-orange-DEFAULT">Bharat's</span><br />Hardest Workers
+            Built for <span className="text-orange">Bharat's</span><br />Hardest Workers
           </h2>
           <p className="text-base text-white/55 leading-[1.78] max-w-[520px]">
             Insurance in India is broken — complex, expensive, full of fine print. We're fixing that.
@@ -39,7 +39,7 @@ export default function WhySection() {
           <div className="flex flex-col gap-3.5 mt-6">
             {USPS.map((usp) => (
               <div key={usp.title} className="flex items-start gap-3.5 group">
-                <div className="w-10 h-10 rounded-xl bg-white/[0.08] flex items-center justify-center text-[17px] flex-shrink-0 transition-colors duration-300 group-hover:bg-teal-DEFAULT/[0.18]">
+                <div className="w-10 h-10 rounded-xl bg-white/[0.08] flex items-center justify-center text-[17px] flex-shrink-0 transition-colors duration-300 group-hover:bg-teal/[0.18]">
                   {usp.ico}
                 </div>
                 <div>
@@ -62,7 +62,7 @@ export default function WhySection() {
           {CARDS.map((card) => (
             <div
               key={card.title}
-              className="bg-white/[0.05] border border-white/[0.09] rounded-2xl p-5 px-4 transition-all duration-300 hover:bg-white/[0.09] hover:border-teal-DEFAULT/25"
+              className="bg-white/[0.05] border border-white/[0.09] rounded-2xl p-5 px-4 transition-all duration-300 hover:bg-white/[0.09] hover:border-teal/25"
             >
               <div className="text-2xl mb-2.5">{card.ico}</div>
               <h4 className="font-heading text-sm font-bold text-white mb-1">{card.title}</h4>

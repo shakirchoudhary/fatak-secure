@@ -42,7 +42,7 @@ export default function CalculatorsPage() {
     { id: 'health', label: 'Health Insurance', emoji: '❤️‍🩹' },
   ]
 
-  const inputCls = 'w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-[14.5px] text-navy-DEFAULT outline-none focus:border-orange-DEFAULT focus:shadow-[0_0_0_3px_rgba(255,107,53,0.12)] transition-all bg-white'
+  const inputCls = 'w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-[14.5px] text-navy outline-none focus:border-orange focus:shadow-[0_0_0_3px_rgba(255,107,53,0.12)] transition-all bg-white'
   const labelCls = 'block text-[11.5px] font-bold text-slate-600 uppercase tracking-[0.8px] mb-2'
 
   return (
@@ -71,8 +71,8 @@ export default function CalculatorsPage() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-1 py-3 rounded-xl font-heading font-bold text-sm border-none cursor-pointer transition-all duration-200 ${
                 activeTab === tab.id
-                  ? 'bg-navy-DEFAULT text-white'
-                  : 'bg-transparent text-slate-500 hover:text-navy-DEFAULT'
+                  ? 'bg-navy text-white'
+                  : 'bg-transparent text-slate-500 hover:text-navy'
               }`}
             >
               {tab.emoji} {tab.label}
@@ -83,7 +83,7 @@ export default function CalculatorsPage() {
         {/* Car Calculator */}
         {activeTab === 'car' && (
           <div className="bg-white rounded-2xl shadow-s1 p-7 mt-5">
-            <h2 className="font-heading text-xl font-extrabold text-navy-DEFAULT mb-6">Car Insurance Calculator</h2>
+            <h2 className="font-heading text-xl font-extrabold text-navy mb-6">Car Insurance Calculator</h2>
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div>
                 <label className={labelCls}>Car Type</label>
@@ -138,7 +138,7 @@ export default function CalculatorsPage() {
               </div>
             </div>
             <button
-              className="w-full bg-gradient-to-br from-orange-DEFAULT to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200"
+              className="w-full bg-gradient-to-br from-orange to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200"
               onClick={() => setCarResult(calcCar({ type: carType, year: carYear, cc: carCc, policy: carPolicy, ncb: carNcb, city: carCity }))}
             >
               Calculate Car Premium
@@ -147,14 +147,14 @@ export default function CalculatorsPage() {
               <div className="mt-5 bg-slate-50 rounded-2xl p-5 border border-slate-200">
                 <div className="text-center mb-4">
                   <div className="text-sm text-slate-500 mb-1">Estimated Annual Premium (incl. GST)</div>
-                  <div className="font-heading text-5xl font-extrabold text-navy-DEFAULT">{fmtINR(carResult.premium)}</div>
+                  <div className="font-heading text-5xl font-extrabold text-navy">{fmtINR(carResult.premium)}</div>
                   <div className="text-sm text-slate-400 mt-1">IDV (Vehicle Value): {fmtINR(carResult.idv)}</div>
                 </div>
                 <div className="text-xs text-slate-400 text-center">
                   *TP rates per IRDAI circular. OD varies by insurer. Range: {fmtINR(carResult.rangeMin)} – {fmtINR(carResult.rangeMax)}
                 </div>
                 <button
-                  className="w-full mt-4 bg-navy-DEFAULT text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
+                  className="w-full mt-4 bg-navy text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
                   onClick={() => showPage('motor-buy')}
                 >
                   Get Actual Quote →
@@ -167,7 +167,7 @@ export default function CalculatorsPage() {
         {/* Bike Calculator */}
         {activeTab === 'bike' && (
           <div className="bg-white rounded-2xl shadow-s1 p-7 mt-5">
-            <h2 className="font-heading text-xl font-extrabold text-navy-DEFAULT mb-6">Bike Insurance Calculator</h2>
+            <h2 className="font-heading text-xl font-extrabold text-navy mb-6">Bike Insurance Calculator</h2>
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div>
                 <label className={labelCls}>Engine Capacity (CC)</label>
@@ -205,7 +205,7 @@ export default function CalculatorsPage() {
               </div>
             </div>
             <button
-              className="w-full bg-gradient-to-br from-orange-DEFAULT to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200"
+              className="w-full bg-gradient-to-br from-orange to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200"
               onClick={() => setBikeResult(calcBike({ cc: bikeCC, year: bikeYear, policy: bikePolicy, ncb: bikeNcb }))}
             >
               Calculate Bike Premium
@@ -214,14 +214,14 @@ export default function CalculatorsPage() {
               <div className="mt-5 bg-slate-50 rounded-2xl p-5 border border-slate-200">
                 <div className="text-center mb-4">
                   <div className="text-sm text-slate-500 mb-1">Estimated Annual Premium (incl. GST)</div>
-                  <div className="font-heading text-5xl font-extrabold text-navy-DEFAULT">{fmtINR(bikeResult.premium)}</div>
+                  <div className="font-heading text-5xl font-extrabold text-navy">{fmtINR(bikeResult.premium)}</div>
                   <div className="text-sm text-slate-400 mt-1">IDV (Bike Value): {fmtINR(bikeResult.idv)}</div>
                 </div>
                 <div className="text-xs text-slate-400 text-center">
                   *For new bikes, 5-year TP mandatory. Range: {fmtINR(bikeResult.rangeMin)} – {fmtINR(bikeResult.rangeMax)}
                 </div>
                 <button
-                  className="w-full mt-4 bg-navy-DEFAULT text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
+                  className="w-full mt-4 bg-navy text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
                   onClick={() => showPage('motor-buy')}
                 >
                   Get Actual Quote →
@@ -234,7 +234,7 @@ export default function CalculatorsPage() {
         {/* Health Calculator */}
         {activeTab === 'health' && (
           <div className="bg-white rounded-2xl shadow-s1 p-7 mt-5">
-            <h2 className="font-heading text-xl font-extrabold text-navy-DEFAULT mb-6">Health Insurance Calculator</h2>
+            <h2 className="font-heading text-xl font-extrabold text-navy mb-6">Health Insurance Calculator</h2>
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div>
                 <label className={labelCls}>Plan Type</label>
@@ -287,7 +287,7 @@ export default function CalculatorsPage() {
               </div>
             </div>
             <button
-              className="w-full bg-gradient-to-br from-orange-DEFAULT to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200"
+              className="w-full bg-gradient-to-br from-orange to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200"
               onClick={() => setHResult(calcHealth({ plan: hPlan, age: hAge, si: hSi, members: hMembers, ped: hPed, city: hCity }))}
             >
               Calculate Health Premium
@@ -296,14 +296,14 @@ export default function CalculatorsPage() {
               <div className="mt-5 bg-slate-50 rounded-2xl p-5 border border-slate-200">
                 <div className="text-center mb-4">
                   <div className="text-sm text-slate-500 mb-1">Estimated Annual Premium (incl. GST)</div>
-                  <div className="font-heading text-5xl font-extrabold text-navy-DEFAULT">{fmtINR(hResult.annual)}</div>
+                  <div className="font-heading text-5xl font-extrabold text-navy">{fmtINR(hResult.annual)}</div>
                   <div className="text-sm text-slate-400 mt-1">Monthly: {fmtINR(hResult.monthly)}/month</div>
                 </div>
                 <div className="text-xs text-slate-400 text-center">
                   {hMembers} member(s), ₹{(hSi/100000).toFixed(0)}L cover. Actual range: {fmtINR(hResult.rangeMin)} – {fmtINR(hResult.rangeMax)}
                 </div>
                 <button
-                  className="w-full mt-4 bg-navy-DEFAULT text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
+                  className="w-full mt-4 bg-navy text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
                   onClick={() => showPage('health-buy')}
                 >
                   Get Actual Quote →

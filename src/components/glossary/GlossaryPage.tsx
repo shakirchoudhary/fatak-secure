@@ -50,7 +50,7 @@ export default function GlossaryPage() {
             placeholder="Search terms... e.g. deductible, NCB, co-pay"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            className="w-full pl-12 pr-4 py-3.5 rounded-2xl border-none outline-none font-body text-navy-DEFAULT text-sm shadow-s2"
+            className="w-full pl-12 pr-4 py-3.5 rounded-2xl border-none outline-none font-body text-navy text-sm shadow-s2"
           />
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function GlossaryPage() {
               <a
                 key={l}
                 href={`#gl-${l}`}
-                className="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-sm font-bold text-slate-500 hover:bg-navy-DEFAULT hover:text-white hover:border-navy-DEFAULT transition-all"
+                className="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-sm font-bold text-slate-500 hover:bg-navy hover:text-white hover:border-navy transition-all"
               >
                 {l}
               </a>
@@ -78,7 +78,7 @@ export default function GlossaryPage() {
             <div className="grid grid-cols-2 gap-4">
               {section.terms.map((term) => (
                 <div key={term.term} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-s1 hover:shadow-s2 transition-shadow">
-                  <h3 className="font-heading text-[15px] font-bold text-navy-DEFAULT mb-2">{term.term}</h3>
+                  <h3 className="font-heading text-[15px] font-bold text-navy mb-2">{term.term}</h3>
                   <p className="text-[13px] text-slate-500 leading-relaxed mb-3">{term.definition}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {term.tags.map((tag) => {

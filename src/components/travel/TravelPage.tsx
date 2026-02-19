@@ -162,7 +162,7 @@ export default function TravelPage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="text-center mb-12">
             <Tag color="travel">Travel Plans</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT">Plans for Every Trip Type</h2>
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">Plans for Every Trip Type</h2>
             <p className="text-[16px] text-slate-500 leading-[1.78] mt-2">Domestic trips, international holidays, or frequent flyers — we have you covered.</p>
           </div>
           <div className="grid grid-cols-3 gap-6">
@@ -174,10 +174,10 @@ export default function TravelPage() {
                   </div>
                 )}
                 <div className="text-[11px] font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--travel)' }}>{plan.type}</div>
-                <div className="font-heading text-[20px] font-extrabold text-navy-DEFAULT mb-1">{plan.name}</div>
+                <div className="font-heading text-[20px] font-extrabold text-navy mb-1">{plan.name}</div>
                 <div className="text-[13px] text-slate-500 mb-4">{plan.desc}</div>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-heading text-[32px] font-extrabold text-navy-DEFAULT">{plan.price}</span>
+                  <span className="font-heading text-[32px] font-extrabold text-navy">{plan.price}</span>
                   <span className="text-[14px] text-slate-400">{plan.per}</span>
                   {plan.orig && <span className="text-[13px] text-slate-400 line-through ml-2">{plan.orig}</span>}
                 </div>
@@ -210,14 +210,14 @@ export default function TravelPage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="mb-11">
             <Tag color="travel">Coverage Details</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT">What Does Travel Insurance Cover?</h2>
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">What Does Travel Insurance Cover?</h2>
             <p className="text-[16px] text-slate-500 leading-[1.78] mt-2 max-w-[520px]">Comprehensive protection before, during and after your trip.</p>
           </div>
           <div className="grid grid-cols-3 gap-5">
             {COVERAGE.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-[0_8px_28px_rgba(0,0,0,0.07)] transition-all">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style={{ background: 'var(--travel-bg)' }}>{c.ico}</div>
-                <h4 className="font-heading font-bold text-[16px] text-navy-DEFAULT mb-2">{c.title}</h4>
+                <h4 className="font-heading font-bold text-[16px] text-navy mb-2">{c.title}</h4>
                 <p className="text-[13.5px] text-slate-500 leading-[1.65] mb-4">{c.desc}</p>
                 <span className="inline-block text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: 'var(--travel-bg)', color: 'var(--travel)' }}>{c.tag}</span>
               </div>
@@ -231,13 +231,13 @@ export default function TravelPage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="mb-10">
             <Tag color="teal">Why Choose Us</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT">Why Smart Travellers Choose FatakSecure</h2>
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">Why Smart Travellers Choose FatakSecure</h2>
           </div>
           <div className="grid grid-cols-3 gap-5">
             {WHY.map((w) => (
               <div key={w.title} className="p-5 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)] transition-all">
                 <div className="text-3xl mb-3">{w.ico}</div>
-                <h4 className="font-heading font-bold text-[15px] text-navy-DEFAULT mb-1.5">{w.title}</h4>
+                <h4 className="font-heading font-bold text-[15px] text-navy mb-1.5">{w.title}</h4>
                 <p className="text-[13px] text-slate-500 leading-[1.6]">{w.desc}</p>
               </div>
             ))}
@@ -249,7 +249,7 @@ export default function TravelPage() {
       <section className="py-[88px] px-[5%]" style={{ background: 'var(--g50)' }}>
         <div className="max-w-[700px] mx-auto">
           <Tag color="travel">FAQ</Tag>
-          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT mb-8">Travel Insurance FAQs</h2>
+          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-8">Travel Insurance FAQs</h2>
           <FAQ items={FAQS} />
         </div>
       </section>

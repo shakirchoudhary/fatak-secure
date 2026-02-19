@@ -199,9 +199,9 @@ export default function HealthBuyPage() {
       {/* Header */}
       <div className="bg-white border-b border-slate-100 px-[5%] py-3.5 flex items-center justify-between sticky top-16 z-10">
         <div className="flex items-center gap-3">
-          <button onClick={goBack} className="text-slate-400 hover:text-navy-DEFAULT transition-colors bg-transparent border-none cursor-pointer font-body text-xl leading-none">←</button>
+          <button onClick={goBack} className="text-slate-400 hover:text-navy transition-colors bg-transparent border-none cursor-pointer font-body text-xl leading-none">←</button>
           <div>
-            <div className="font-heading font-bold text-navy-DEFAULT text-sm">Health Insurance</div>
+            <div className="font-heading font-bold text-navy text-sm">Health Insurance</div>
             <div className="text-[11px] text-slate-400">{STEP_LABELS[currentStep]} · Step {currentStep + 1} of 9</div>
           </div>
         </div>
@@ -211,8 +211,8 @@ export default function HealthBuyPage() {
             <div
               key={i}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                i < currentStep ? 'w-5 bg-health-DEFAULT opacity-50' :
-                i === currentStep ? 'w-8 bg-health-DEFAULT' :
+                i < currentStep ? 'w-5 bg-health opacity-50' :
+                i === currentStep ? 'w-8 bg-health' :
                 'w-5 bg-slate-200'
               }`}
             />
@@ -224,32 +224,32 @@ export default function HealthBuyPage() {
       {screen === 0 && (
         <div className="max-w-[480px] mx-auto px-5 py-10 text-center">
           <div className="text-5xl mb-4">🏥</div>
-          <h2 className="font-heading text-[24px] font-extrabold text-navy-DEFAULT mb-2">Get Health Insurance Quotes</h2>
+          <h2 className="font-heading text-[24px] font-extrabold text-navy mb-2">Get Health Insurance Quotes</h2>
           <p className="text-slate-500 text-sm mb-8">Compare plans from 20+ insurers. 100% free. No spam.</p>
 
           <div className="bg-white rounded-2xl shadow-s1 p-6 text-left">
             <label className="block text-[11.5px] font-bold text-slate-600 uppercase tracking-[0.8px] mb-2">Mobile Number</label>
-            <div className="flex items-center border-[1.5px] border-slate-200 rounded-xl overflow-hidden focus-within:border-health-DEFAULT focus-within:shadow-[0_0_0_3px_rgba(14,165,233,0.12)] transition-all mb-5">
+            <div className="flex items-center border-[1.5px] border-slate-200 rounded-xl overflow-hidden focus-within:border-health focus-within:shadow-[0_0_0_3px_rgba(14,165,233,0.12)] transition-all mb-5">
               <div className="px-3.5 py-3 font-bold text-slate-500 bg-slate-50 border-r border-slate-100 text-sm flex-shrink-0">+91</div>
               <input
                 type="tel"
                 placeholder="Enter your mobile number"
                 value={phone}
                 onChange={e => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
-                className="flex-1 px-3.5 py-3 border-none outline-none font-body text-[14.5px] text-navy-DEFAULT bg-white"
+                className="flex-1 px-3.5 py-3 border-none outline-none font-body text-[14.5px] text-navy bg-white"
                 autoFocus
               />
             </div>
 
             <div className="flex items-start gap-2.5 text-xs text-slate-400 mb-5 leading-snug">
-              <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} className="mt-0.5 flex-shrink-0 accent-health-DEFAULT" />
-              <span>I agree to the <span className="text-health-DEFAULT font-semibold cursor-pointer">Terms & Conditions</span> and authorise FatakSecure to fetch my insurance details via Bima Central (IRDAI).</span>
+              <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} className="mt-0.5 flex-shrink-0 accent-health" />
+              <span>I agree to the <span className="text-health font-semibold cursor-pointer">Terms & Conditions</span> and authorise FatakSecure to fetch my insurance details via Bima Central (IRDAI).</span>
             </div>
 
             <button
               disabled={phone.length !== 10 || !consent}
               onClick={() => goTo(1)}
-              className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
+              className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
             >
               Get Free Quotes →
             </button>
@@ -267,7 +267,7 @@ export default function HealthBuyPage() {
       {screen === 1 && (
         <div className="max-w-[480px] mx-auto px-5 py-10 text-center">
           <div className="text-5xl mb-4">📱</div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-2">Verify your number</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-2">Verify your number</h2>
           <p className="text-sm text-slate-500 mb-8">We've sent a 4-digit OTP to <strong>+91 {phone || 'XXXXXXXXXX'}</strong></p>
 
           <div className="flex gap-3 justify-center mb-6">
@@ -293,19 +293,19 @@ export default function HealthBuyPage() {
                   }
                 }}
                 data-hotp={i}
-                className="w-14 h-16 border-2 border-slate-200 rounded-xl text-center font-heading text-2xl font-extrabold text-navy-DEFAULT outline-none focus:border-health-DEFAULT focus:shadow-[0_0_0_3px_rgba(14,165,233,0.12)] transition-all bg-white"
+                className="w-14 h-16 border-2 border-slate-200 rounded-xl text-center font-heading text-2xl font-extrabold text-navy outline-none focus:border-health focus:shadow-[0_0_0_3px_rgba(14,165,233,0.12)] transition-all bg-white"
               />
             ))}
           </div>
 
           <p className="text-sm text-slate-400 mb-6">
-            Didn't receive? <span className="text-health-DEFAULT font-semibold cursor-pointer" onClick={() => setOtp(['', '', '', ''])}>Resend OTP</span>
+            Didn't receive? <span className="text-health font-semibold cursor-pointer" onClick={() => setOtp(['', '', '', ''])}>Resend OTP</span>
           </p>
 
           <button
             disabled={otp.join('').length !== 4}
             onClick={() => goTo(2)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
           >
             Verify & Continue →
           </button>
@@ -318,7 +318,7 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             Step 2 of 9
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Who needs cover?</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Who needs cover?</h2>
           <p className="text-sm text-slate-500 mb-6">Select all family members to include in the plan.</p>
 
           <div className="grid grid-cols-3 gap-3 mb-6">
@@ -331,15 +331,15 @@ export default function HealthBuyPage() {
                 }}
                 className={`border-2 rounded-2xl p-3.5 cursor-pointer transition-all duration-200 text-center ${
                   members[m.id]
-                    ? 'border-health-DEFAULT bg-health-bg'
-                    : 'border-slate-200 bg-white hover:border-health-DEFAULT'
+                    ? 'border-health bg-health-bg'
+                    : 'border-slate-200 bg-white hover:border-health'
                 } ${m.id === 'self' ? 'cursor-default' : ''}`}
               >
                 <div className="text-2xl mb-1.5">{m.emoji}</div>
-                <div className="font-heading text-[12.5px] font-bold text-navy-DEFAULT mb-0.5">{m.name}</div>
+                <div className="font-heading text-[12.5px] font-bold text-navy mb-0.5">{m.name}</div>
                 <div className="text-[10.5px] text-slate-400">{m.sub}</div>
                 <div className={`w-4 h-4 border-2 rounded flex items-center justify-center text-[9px] text-white mx-auto mt-2 transition-all ${
-                  members[m.id] ? 'bg-health-DEFAULT border-health-DEFAULT' : 'border-slate-300'
+                  members[m.id] ? 'bg-health border-health' : 'border-slate-300'
                 }`}>
                   {members[m.id] ? '✓' : ''}
                 </div>
@@ -349,7 +349,7 @@ export default function HealthBuyPage() {
 
           <button
             onClick={() => goTo(3)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white hover:-translate-y-0.5 transition-transform"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform"
           >
             Continue → ({selectedMembers.length} member{selectedMembers.length !== 1 ? 's' : ''})
           </button>
@@ -362,7 +362,7 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             Step 3 of 9
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Enter member ages</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Enter member ages</h2>
           <p className="text-sm text-slate-500 mb-6">Age affects your premium. Enter correct ages for accurate quotes.</p>
 
           <div className="flex flex-col gap-3 mb-6">
@@ -370,18 +370,18 @@ export default function HealthBuyPage() {
               <div key={m.id} className="bg-white border-[1.5px] border-slate-200 rounded-2xl px-5 py-4 flex items-center gap-4">
                 <div className="text-2xl">{m.emoji}</div>
                 <div className="flex-1">
-                  <div className="font-heading text-sm font-bold text-navy-DEFAULT">{m.name}</div>
+                  <div className="font-heading text-sm font-bold text-navy">{m.name}</div>
                   <div className="text-[11px] text-slate-400">{m.sub}</div>
                 </div>
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setAges(prev => ({ ...prev, [m.id]: Math.max(1, prev[m.id] - 1) }))}
-                    className="w-9 h-9 rounded-xl border-[1.5px] border-slate-200 bg-white font-bold text-lg text-slate-500 hover:border-health-DEFAULT hover:text-health-DEFAULT transition-colors cursor-pointer flex items-center justify-center"
+                    className="w-9 h-9 rounded-xl border-[1.5px] border-slate-200 bg-white font-bold text-lg text-slate-500 hover:border-health hover:text-health transition-colors cursor-pointer flex items-center justify-center"
                   >−</button>
-                  <span className="font-heading text-lg font-extrabold text-navy-DEFAULT w-8 text-center">{ages[m.id]}</span>
+                  <span className="font-heading text-lg font-extrabold text-navy w-8 text-center">{ages[m.id]}</span>
                   <button
                     onClick={() => setAges(prev => ({ ...prev, [m.id]: Math.min(80, prev[m.id] + 1) }))}
-                    className="w-9 h-9 rounded-xl border-[1.5px] border-slate-200 bg-white font-bold text-lg text-slate-500 hover:border-health-DEFAULT hover:text-health-DEFAULT transition-colors cursor-pointer flex items-center justify-center"
+                    className="w-9 h-9 rounded-xl border-[1.5px] border-slate-200 bg-white font-bold text-lg text-slate-500 hover:border-health hover:text-health transition-colors cursor-pointer flex items-center justify-center"
                   >+</button>
                 </div>
               </div>
@@ -390,7 +390,7 @@ export default function HealthBuyPage() {
 
           <button
             onClick={() => goTo(4)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white hover:-translate-y-0.5 transition-transform"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform"
           >
             Continue →
           </button>
@@ -403,7 +403,7 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             Step 4 of 9
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Any pre-existing diseases?</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Any pre-existing diseases?</h2>
           <p className="text-sm text-slate-500 mb-6">Select all that apply across all insured members. Honest declaration ensures hassle-free claims.</p>
 
           <div className="grid grid-cols-2 gap-3 mb-4">
@@ -413,14 +413,14 @@ export default function HealthBuyPage() {
                 onClick={() => setPed(prev => prev.includes(c.id) ? prev.filter(p => p !== c.id) : [...prev, c.id])}
                 className={`border-2 rounded-2xl p-4 cursor-pointer transition-all duration-200 flex items-center gap-3 ${
                   ped.includes(c.id)
-                    ? 'border-health-DEFAULT bg-health-bg'
-                    : 'border-slate-200 bg-white hover:border-health-DEFAULT'
+                    ? 'border-health bg-health-bg'
+                    : 'border-slate-200 bg-white hover:border-health'
                 }`}
               >
                 <span className="text-2xl">{c.emoji}</span>
-                <span className={`font-heading text-[12.5px] font-bold flex-1 ${ped.includes(c.id) ? 'text-health-dark' : 'text-navy-DEFAULT'}`}>{c.name}</span>
+                <span className={`font-heading text-[12.5px] font-bold flex-1 ${ped.includes(c.id) ? 'text-health-dark' : 'text-navy'}`}>{c.name}</span>
                 <div className={`w-4 h-4 border-2 rounded flex items-center justify-center text-[9px] text-white flex-shrink-0 transition-all ${
-                  ped.includes(c.id) ? 'bg-health-DEFAULT border-health-DEFAULT' : 'border-slate-300'
+                  ped.includes(c.id) ? 'bg-health border-health' : 'border-slate-300'
                 }`}>
                   {ped.includes(c.id) ? '✓' : ''}
                 </div>
@@ -430,7 +430,7 @@ export default function HealthBuyPage() {
 
           <button
             onClick={() => { setPed([]); goTo(5) }}
-            className="w-full py-3 mb-3 rounded-2xl font-heading font-bold text-sm border-2 border-slate-200 cursor-pointer bg-white text-slate-500 hover:border-health-DEFAULT hover:text-health-dark transition-all"
+            className="w-full py-3 mb-3 rounded-2xl font-heading font-bold text-sm border-2 border-slate-200 cursor-pointer bg-white text-slate-500 hover:border-health hover:text-health-dark transition-all"
           >
             None of the above ✓
           </button>
@@ -438,7 +438,7 @@ export default function HealthBuyPage() {
           <button
             disabled={ped.length === 0}
             onClick={() => goTo(5)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
           >
             Continue →
           </button>
@@ -451,17 +451,17 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             Step 5 of 9
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Your city</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Your city</h2>
           <p className="text-sm text-slate-500 mb-6">Helps us show hospitals in your network and city-specific plans.</p>
 
-          <div className="flex items-center border-[1.5px] border-slate-200 rounded-xl overflow-hidden focus-within:border-health-DEFAULT focus-within:shadow-[0_0_0_3px_rgba(14,165,233,0.12)] transition-all mb-5">
+          <div className="flex items-center border-[1.5px] border-slate-200 rounded-xl overflow-hidden focus-within:border-health focus-within:shadow-[0_0_0_3px_rgba(14,165,233,0.12)] transition-all mb-5">
             <span className="pl-3.5 text-slate-400 text-base">🔍</span>
             <input
               type="text"
               placeholder="Search your city…"
               value={citySearch}
               onChange={e => setCitySearch(e.target.value)}
-              className="flex-1 px-3 py-3 border-none outline-none font-body text-[14.5px] text-navy-DEFAULT bg-white"
+              className="flex-1 px-3 py-3 border-none outline-none font-body text-[14.5px] text-navy bg-white"
             />
           </div>
 
@@ -473,8 +473,8 @@ export default function HealthBuyPage() {
                 onClick={() => { setCity(c); setCitySearch('') }}
                 className={`px-3.5 py-2 rounded-xl text-sm font-semibold border-[1.5px] transition-all cursor-pointer ${
                   city === c
-                    ? 'border-health-DEFAULT bg-health-bg text-health-dark'
-                    : 'border-slate-200 bg-white text-slate-600 hover:border-health-DEFAULT'
+                    ? 'border-health bg-health-bg text-health-dark'
+                    : 'border-slate-200 bg-white text-slate-600 hover:border-health'
                 }`}
               >
                 {c}
@@ -483,20 +483,20 @@ export default function HealthBuyPage() {
           </div>
 
           <label className="block text-[11.5px] font-bold text-slate-600 uppercase tracking-[0.8px] mb-2">Pincode <span className="text-[10px] font-normal text-slate-400 normal-case">(Optional)</span></label>
-          <div className="flex items-center border-[1.5px] border-slate-200 rounded-xl overflow-hidden focus-within:border-health-DEFAULT transition-all mb-6">
+          <div className="flex items-center border-[1.5px] border-slate-200 rounded-xl overflow-hidden focus-within:border-health transition-all mb-6">
             <input
               type="text"
               inputMode="numeric"
               placeholder="6-digit pincode"
               value={pincode}
               onChange={e => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))}
-              className="flex-1 px-3.5 py-3 border-none outline-none font-body text-[14.5px] text-navy-DEFAULT bg-white"
+              className="flex-1 px-3.5 py-3 border-none outline-none font-body text-[14.5px] text-navy bg-white"
             />
           </div>
 
           <button
             onClick={() => goTo(6)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white hover:-translate-y-0.5 transition-transform"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform"
           >
             Find Best Plans →
           </button>
@@ -508,16 +508,16 @@ export default function HealthBuyPage() {
         <div className="max-w-[480px] mx-auto px-5 py-20 text-center">
           <div className="relative w-20 h-20 mx-auto mb-6">
             <div className="absolute inset-0 rounded-full border-4 border-health-bg" />
-            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-health-DEFAULT animate-spin" />
+            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-health animate-spin" />
             <div className="absolute inset-0 flex items-center justify-center text-2xl">🔍</div>
           </div>
-          <h3 className="font-heading text-xl font-extrabold text-navy-DEFAULT mb-2">Fetching best plans…</h3>
+          <h3 className="font-heading text-xl font-extrabold text-navy mb-2">Fetching best plans…</h3>
           <p className="text-slate-400 text-sm mb-8">Comparing premiums from 20+ insurers</p>
           <div className="bg-white rounded-2xl border border-slate-100 p-5 text-left max-w-xs mx-auto">
             {['Analysing your family profile…', 'Comparing premiums…', 'Checking hospital networks…'].map((msg, i) => (
               <div key={i} className={`flex items-center gap-3 text-sm ${i > 0 ? 'mt-3' : ''}`}>
                 <span className="text-base">{i === 0 ? '✅' : i === 1 ? '⏳' : '⏳'}</span>
-                <span className={i === 0 ? 'text-navy-DEFAULT font-semibold' : 'text-slate-400'}>{msg}</span>
+                <span className={i === 0 ? 'text-navy font-semibold' : 'text-slate-400'}>{msg}</span>
               </div>
             ))}
           </div>
@@ -530,12 +530,12 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             Step 6 of 9
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1">Choose your plan</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1">Choose your plan</h2>
           <p className="text-sm text-slate-500 mb-4">Sorted by value · ₹10 Lakh cover for {selectedMembers.length} member(s) in {city}</p>
 
           <div className="flex gap-2 mb-5 overflow-x-auto pb-1">
             {['All Plans', 'Lowest Price', 'Best Coverage', 'No Co-pay'].map(f => (
-              <button key={f} className="px-4 py-1.5 border-[1.5px] border-slate-200 rounded-2xl text-xs font-semibold text-slate-500 bg-white hover:border-health-DEFAULT hover:text-health-dark transition-all whitespace-nowrap cursor-pointer">
+              <button key={f} className="px-4 py-1.5 border-[1.5px] border-slate-200 rounded-2xl text-xs font-semibold text-slate-500 bg-white hover:border-health hover:text-health-dark transition-all whitespace-nowrap cursor-pointer">
                 {f}
               </button>
             ))}
@@ -547,44 +547,44 @@ export default function HealthBuyPage() {
                 key={q.id}
                 onClick={() => setSelectedQuote(q.id)}
                 className={`bg-white border-[1.5px] rounded-[18px] p-5 cursor-pointer transition-all duration-200 relative ${
-                  selectedQuote === q.id ? 'border-health-DEFAULT shadow-s2' : 'border-slate-100 hover:border-health-DEFAULT'
+                  selectedQuote === q.id ? 'border-health shadow-s2' : 'border-slate-100 hover:border-health'
                 }`}
               >
                 {q.tag && (
-                  <div className="absolute -top-3 left-4 bg-gradient-to-r from-orange-DEFAULT to-orange-dark text-white text-[10.5px] font-bold px-3 py-1 rounded-xl">
+                  <div className="absolute -top-3 left-4 bg-gradient-to-r from-orange to-orange-dark text-white text-[10.5px] font-bold px-3 py-1 rounded-xl">
                     {q.tag}
                   </div>
                 )}
                 <div className="flex items-center gap-3.5 mb-4">
-                  <div className="w-[50px] h-[50px] rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-[10px] font-extrabold text-navy-DEFAULT text-center leading-snug whitespace-pre flex-shrink-0">
+                  <div className="w-[50px] h-[50px] rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-[10px] font-extrabold text-navy text-center leading-snug whitespace-pre flex-shrink-0">
                     {q.logo}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-heading text-[14.5px] font-bold text-navy-DEFAULT leading-tight">{q.insurer}</div>
+                    <div className="font-heading text-[14.5px] font-bold text-navy leading-tight">{q.insurer}</div>
                     <div className="text-[12px] font-semibold text-slate-600">{q.plan}</div>
                     <div className="text-xs text-slate-400">{q.desc}</div>
                   </div>
                   <div className="text-right flex-shrink-0">
-                    <div className="font-heading text-[22px] font-extrabold text-navy-DEFAULT leading-none">₹{q.price}</div>
+                    <div className="font-heading text-[22px] font-extrabold text-navy leading-none">₹{q.price}</div>
                     <div className="text-xs text-slate-400">/month</div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-1.5">
                   {q.features.map(f => (
                     <div key={f} className="flex items-center gap-2 text-xs text-slate-600">
-                      <span className="w-4 h-4 rounded-full bg-health-bg text-health-DEFAULT text-[8px] font-extrabold flex items-center justify-center flex-shrink-0">✓</span>
+                      <span className="w-4 h-4 rounded-full bg-health-bg text-health text-[8px] font-extrabold flex items-center justify-center flex-shrink-0">✓</span>
                       {f}
                     </div>
                   ))}
                 </div>
                 {selectedQuote === q.id && (
                   <div className="mt-4 pt-4 border-t border-slate-100 flex gap-2">
-                    <button className="flex-1 py-2 rounded-xl border-[1.5px] border-health-DEFAULT text-health-dark font-heading font-bold text-xs bg-white cursor-pointer hover:bg-health-bg transition-colors">
+                    <button className="flex-1 py-2 rounded-xl border-[1.5px] border-health text-health-dark font-heading font-bold text-xs bg-white cursor-pointer hover:bg-health-bg transition-colors">
                       View Details
                     </button>
                     <button
                       onClick={e => { e.stopPropagation(); goTo(8) }}
-                      className="flex-1 py-2 rounded-xl border-none cursor-pointer font-heading font-bold text-xs bg-gradient-to-br from-health-DEFAULT to-health-dark text-white hover:-translate-y-0.5 transition-transform"
+                      className="flex-1 py-2 rounded-xl border-none cursor-pointer font-heading font-bold text-xs bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform"
                     >
                       Buy Now →
                     </button>
@@ -597,7 +597,7 @@ export default function HealthBuyPage() {
           <button
             disabled={selectedQuote === null}
             onClick={() => goTo(8)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
           >
             Proceed to Buy →
           </button>
@@ -610,20 +610,20 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             Step 6 of 9
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Enhance your cover</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Enhance your cover</h2>
           <p className="text-sm text-slate-500 mb-6">Add optional riders for more comprehensive protection.</p>
 
           {/* Mandatory PA */}
-          <div className="bg-health-bg border border-health-DEFAULT/20 rounded-2xl p-4 flex items-start gap-3.5 mb-4">
+          <div className="bg-health-bg border border-health/20 rounded-2xl p-4 flex items-start gap-3.5 mb-4">
             <div className="text-2xl flex-shrink-0">🛡️</div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-0.5">
-                <span className="font-heading text-sm font-bold text-navy-DEFAULT">Personal Accident Cover</span>
-                <span className="text-[10px] font-bold bg-health-DEFAULT text-white px-2 py-0.5 rounded-full">Mandatory</span>
+                <span className="font-heading text-sm font-bold text-navy">Personal Accident Cover</span>
+                <span className="text-[10px] font-bold bg-health text-white px-2 py-0.5 rounded-full">Mandatory</span>
               </div>
               <div className="text-xs text-slate-500">₹10 Lakh accident cover included with your health plan. Covers accidental death & disability.</div>
             </div>
-            <div className="w-5 h-5 bg-health-DEFAULT rounded-full flex items-center justify-center text-[9px] text-white font-bold flex-shrink-0">✓</div>
+            <div className="w-5 h-5 bg-health rounded-full flex items-center justify-center text-[9px] text-white font-bold flex-shrink-0">✓</div>
           </div>
 
           <div className="text-[11.5px] font-bold text-slate-500 uppercase tracking-wider mb-3">Optional Riders</div>
@@ -634,19 +634,19 @@ export default function HealthBuyPage() {
                 onClick={() => setActiveAddons(prev => prev.includes(a.id) ? prev.filter(x => x !== a.id) : [...prev, a.id])}
                 className={`border-[1.5px] rounded-2xl p-4 cursor-pointer transition-all duration-200 flex items-start gap-3.5 ${
                   activeAddons.includes(a.id)
-                    ? 'border-health-DEFAULT bg-health-bg'
-                    : 'border-slate-100 bg-white hover:border-health-DEFAULT'
+                    ? 'border-health bg-health-bg'
+                    : 'border-slate-100 bg-white hover:border-health'
                 }`}
               >
                 <div className="text-2xl flex-shrink-0">{a.emoji}</div>
                 <div className="flex-1">
-                  <div className="font-heading text-sm font-bold text-navy-DEFAULT mb-0.5">{a.name}</div>
+                  <div className="font-heading text-sm font-bold text-navy mb-0.5">{a.name}</div>
                   <div className="text-xs text-slate-500 leading-snug">{a.desc}</div>
                 </div>
                 <div className="text-right flex-shrink-0">
                   <div className="font-heading text-sm font-bold text-health-dark">+₹{a.price}/mo</div>
                   <div className={`w-5 h-5 border-2 rounded flex items-center justify-center text-[9px] text-white ml-auto mt-1.5 ${
-                    activeAddons.includes(a.id) ? 'bg-health-DEFAULT border-health-DEFAULT' : 'border-slate-300'
+                    activeAddons.includes(a.id) ? 'bg-health border-health' : 'border-slate-300'
                   }`}>
                     {activeAddons.includes(a.id) ? '✓' : ''}
                   </div>
@@ -659,13 +659,13 @@ export default function HealthBuyPage() {
           <div className="bg-white border-t border-slate-100 rounded-2xl shadow-s2 p-4 flex items-center justify-between mb-2">
             <div>
               <div className="text-[11px] text-slate-400">Total Premium</div>
-              <div className="font-heading text-xl font-extrabold text-navy-DEFAULT">
+              <div className="font-heading text-xl font-extrabold text-navy">
                 ₹{(quote.price + addonTotal).toLocaleString('en-IN')} <span className="text-xs text-slate-400 font-normal">/month</span>
               </div>
             </div>
             <button
               onClick={() => goTo(9)}
-              className="py-3 px-6 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white hover:-translate-y-0.5 transition-transform"
+              className="py-3 px-6 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform"
             >
               Continue →
             </button>
@@ -679,32 +679,32 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             Step 7 of 9
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Proposal Details</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Proposal Details</h2>
           <p className="text-sm text-slate-500 mb-6">These details will appear on your policy document.</p>
 
           {/* Selected plan banner */}
-          <div className="bg-health-bg rounded-xl px-4 py-3 flex items-center gap-3 mb-5 border border-health-DEFAULT/20">
+          <div className="bg-health-bg rounded-xl px-4 py-3 flex items-center gap-3 mb-5 border border-health/20">
             <span className="text-xl">🏢</span>
             <div className="flex-1">
-              <div className="font-heading text-sm font-bold text-navy-DEFAULT">{quote.insurer}</div>
+              <div className="font-heading text-sm font-bold text-navy">{quote.insurer}</div>
               <div className="text-xs text-slate-400">{quote.plan} · ₹10 Lakh</div>
             </div>
-            <button onClick={() => goTo(7)} className="text-[11px] text-health-DEFAULT font-semibold cursor-pointer bg-transparent border-none">Change</button>
+            <button onClick={() => goTo(7)} className="text-[11px] text-health font-semibold cursor-pointer bg-transparent border-none">Change</button>
           </div>
 
           {/* Proposer Details */}
           <div className="bg-white rounded-2xl border border-slate-100 p-5 mb-4">
-            <h4 className="font-heading text-sm font-bold text-navy-DEFAULT mb-4">🙋 Proposer Details</h4>
+            <h4 className="font-heading text-sm font-bold text-navy mb-4">🙋 Proposer Details</h4>
 
             <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Full Name (as per Aadhaar)</label>
             <input type="text" placeholder="Enter full name" value={propName} onChange={e => setPropName(e.target.value)}
-              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white mb-3.5" />
+              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white mb-3.5" />
 
             <div className="grid grid-cols-2 gap-3 mb-3.5">
               <div>
                 <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Date of Birth</label>
                 <input type="date" value={propDob} onChange={e => setPropDob(e.target.value)}
-                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white" />
+                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white" />
               </div>
               <div>
                 <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Gender</label>
@@ -712,7 +712,7 @@ export default function HealthBuyPage() {
                   {(['Male', 'Female'] as const).map(g => (
                     <button key={g} onClick={() => setPropGender(g)}
                       className={`flex-1 py-3 rounded-xl text-sm font-bold border-[1.5px] transition-all cursor-pointer ${
-                        propGender === g ? 'border-health-DEFAULT bg-health-bg text-health-dark' : 'border-slate-200 bg-white text-slate-500'
+                        propGender === g ? 'border-health bg-health-bg text-health-dark' : 'border-slate-200 bg-white text-slate-500'
                       }`}>
                       {g === 'Male' ? '♂' : '♀'} {g}
                     </button>
@@ -723,32 +723,32 @@ export default function HealthBuyPage() {
 
             <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Email Address</label>
             <input type="email" placeholder="Enter email address" value={propEmail} onChange={e => setPropEmail(e.target.value)}
-              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white mb-3.5" />
+              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white mb-3.5" />
 
             <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">PAN Number <span className="text-[10px] font-normal text-slate-400 normal-case">(Optional — for 80D benefit)</span></label>
             <input type="text" placeholder="ABCDE1234F (optional)" value={propPan}
               onChange={e => setPropPan(e.target.value.toUpperCase().slice(0, 10))} maxLength={10}
-              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white uppercase" />
+              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white uppercase" />
           </div>
 
           {/* Address */}
           <div className="bg-white rounded-2xl border border-slate-100 p-5 mb-4">
-            <h4 className="font-heading text-sm font-bold text-navy-DEFAULT mb-4">📍 Address Details</h4>
+            <h4 className="font-heading text-sm font-bold text-navy mb-4">📍 Address Details</h4>
 
             <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Residential Address</label>
             <input type="text" placeholder="House no., street name, area" value={propAddr} onChange={e => setPropAddr(e.target.value)}
-              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white mb-3.5" />
+              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white mb-3.5" />
 
             <div className="grid grid-cols-2 gap-3 mb-3.5">
               <div>
                 <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">City</label>
                 <input type="text" placeholder="City" value={propCity || city} onChange={e => setPropCity(e.target.value)}
-                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white" />
+                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white" />
               </div>
               <div>
                 <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">State</label>
                 <select value={propState} onChange={e => setPropState(e.target.value)}
-                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white">
+                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white">
                   {STATES.map(s => <option key={s}>{s}</option>)}
                 </select>
               </div>
@@ -756,19 +756,19 @@ export default function HealthBuyPage() {
 
             <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Pincode <span className="text-[10px] font-normal text-slate-400 normal-case">(Optional)</span></label>
             <input type="text" inputMode="numeric" placeholder="6-digit pincode" value={propPin} onChange={e => setPropPin(e.target.value.replace(/\D/g, '').slice(0, 6))}
-              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white" />
+              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white" />
           </div>
 
           {/* Health Declaration */}
           <div className="bg-white rounded-2xl border border-slate-100 p-5 mb-6">
-            <h4 className="font-heading text-sm font-bold text-navy-DEFAULT mb-4">🩺 Health Declaration</h4>
+            <h4 className="font-heading text-sm font-bold text-navy mb-4">🩺 Health Declaration</h4>
 
             <label className="block text-[12px] text-slate-600 mb-2 leading-snug">Have any insured members smoked / consumed tobacco in the last 2 years?</label>
             <div className="flex gap-2 mb-4">
               {[true, false].map(v => (
                 <button key={String(v)} onClick={() => setSmoker(v)}
                   className={`flex-1 py-2.5 rounded-xl text-sm font-bold border-[1.5px] transition-all cursor-pointer ${
-                    smoker === v ? 'border-health-DEFAULT bg-health-bg text-health-dark' : 'border-slate-200 bg-white text-slate-500'
+                    smoker === v ? 'border-health bg-health-bg text-health-dark' : 'border-slate-200 bg-white text-slate-500'
                   }`}>
                   {v ? 'Yes' : 'No'}
                 </button>
@@ -780,7 +780,7 @@ export default function HealthBuyPage() {
               {[true, false].map(v => (
                 <button key={String(v)} onClick={() => setHospitalized(v)}
                   className={`flex-1 py-2.5 rounded-xl text-sm font-bold border-[1.5px] transition-all cursor-pointer ${
-                    hospitalized === v ? 'border-health-DEFAULT bg-health-bg text-health-dark' : 'border-slate-200 bg-white text-slate-500'
+                    hospitalized === v ? 'border-health bg-health-bg text-health-dark' : 'border-slate-200 bg-white text-slate-500'
                   }`}>
                   {v ? 'Yes' : 'No'}
                 </button>
@@ -792,14 +792,14 @@ export default function HealthBuyPage() {
           <div className="bg-white rounded-2xl shadow-s2 border border-slate-100 p-4 flex items-center justify-between">
             <div>
               <div className="text-[11px] text-slate-400">Total Premium</div>
-              <div className="font-heading text-xl font-extrabold text-navy-DEFAULT">
+              <div className="font-heading text-xl font-extrabold text-navy">
                 ₹{(quote.price + addonTotal).toLocaleString('en-IN')} <span className="text-xs text-slate-400 font-normal">/month</span>
               </div>
             </div>
             <button
               disabled={!propName || !propDob || !propEmail}
               onClick={() => goTo(10)}
-              className="py-3 px-6 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
+              className="py-3 px-6 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
             >
               Continue →
             </button>
@@ -813,21 +813,21 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             Step 7 of 9
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Nominee Details</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Nominee Details</h2>
           <p className="text-sm text-slate-500 mb-6">The nominee will receive any claim payout. Can be changed from your policy dashboard.</p>
 
           <div className="bg-white rounded-2xl border border-slate-100 p-5 mb-6">
-            <h4 className="font-heading text-sm font-bold text-navy-DEFAULT mb-4">👤 Add Nominee</h4>
+            <h4 className="font-heading text-sm font-bold text-navy mb-4">👤 Add Nominee</h4>
 
             <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Nominee Full Name</label>
             <input type="text" placeholder="Enter nominee's full name" value={nomName} onChange={e => setNomName(e.target.value)}
-              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white mb-3.5" />
+              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white mb-3.5" />
 
             <div className="grid grid-cols-2 gap-3 mb-3.5">
               <div>
                 <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Relationship</label>
                 <select value={nomRel} onChange={e => setNomRel(e.target.value)}
-                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white">
+                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white">
                   <option value="">Select</option>
                   {['Spouse', 'Father', 'Mother', 'Son', 'Daughter', 'Sibling', 'Other'].map(r => <option key={r}>{r}</option>)}
                 </select>
@@ -835,19 +835,19 @@ export default function HealthBuyPage() {
               <div>
                 <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Date of Birth</label>
                 <input type="date" value={nomDob} onChange={e => setNomDob(e.target.value)}
-                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white" />
+                  className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white" />
               </div>
             </div>
 
             <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Share (%)</label>
             <input type="number" placeholder="100" defaultValue={100} min={1} max={100}
-              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy-DEFAULT outline-none focus:border-health-DEFAULT transition-all bg-white" />
+              className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-sm text-navy outline-none focus:border-health transition-all bg-white" />
           </div>
 
           <button
             disabled={!nomName || !nomRel || !nomDob}
             onClick={() => goTo(11)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
           >
             Review & Proceed →
           </button>
@@ -860,17 +860,17 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             📋 Review & Pay
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Policy Summary</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Policy Summary</h2>
           <p className="text-sm text-slate-500 mb-6">Please review all details before proceeding to payment.</p>
 
           {/* Summary card */}
           <div className="bg-white rounded-2xl border border-slate-100 overflow-hidden mb-4">
-            <div className="bg-health-bg px-5 py-4 flex items-center gap-3 border-b border-health-DEFAULT/20">
-              <div className="w-12 h-12 bg-white rounded-xl border border-slate-100 flex items-center justify-center text-[10px] font-extrabold text-navy-DEFAULT whitespace-pre text-center leading-snug">
+            <div className="bg-health-bg px-5 py-4 flex items-center gap-3 border-b border-health/20">
+              <div className="w-12 h-12 bg-white rounded-xl border border-slate-100 flex items-center justify-center text-[10px] font-extrabold text-navy whitespace-pre text-center leading-snug">
                 {quote.logo}
               </div>
               <div>
-                <div className="font-heading font-bold text-navy-DEFAULT text-sm">{quote.insurer}</div>
+                <div className="font-heading font-bold text-navy text-sm">{quote.insurer}</div>
                 <div className="text-xs text-slate-500">{quote.plan} · Family Floater</div>
               </div>
             </div>
@@ -890,7 +890,7 @@ export default function HealthBuyPage() {
               ].map(([k, v]) => (
                 <div key={k} className="flex items-center justify-between py-2 border-b border-slate-50 last:border-0">
                   <span className="text-xs text-slate-500 font-medium">{k}</span>
-                  <span className="text-xs font-bold text-navy-DEFAULT text-right max-w-[55%]">{v}</span>
+                  <span className="text-xs font-bold text-navy text-right max-w-[55%]">{v}</span>
                 </div>
               ))}
             </div>
@@ -898,7 +898,7 @@ export default function HealthBuyPage() {
 
           {/* Premium breakdown */}
           <div className="bg-white rounded-2xl border border-slate-100 p-5 mb-4">
-            <div className="font-heading text-sm font-bold text-navy-DEFAULT mb-4 flex items-center gap-2">
+            <div className="font-heading text-sm font-bold text-navy mb-4 flex items-center gap-2">
               <span>💰</span> Premium Breakdown
             </div>
             {[
@@ -907,22 +907,22 @@ export default function HealthBuyPage() {
             ].map(([k, v]) => (
               <div key={k} className="flex justify-between text-sm py-1.5">
                 <span className="text-slate-500">{k}</span>
-                <span className="font-semibold text-navy-DEFAULT">{v}</span>
+                <span className="font-semibold text-navy">{v}</span>
               </div>
             ))}
             <div className="border-t border-slate-100 my-2" />
             <div className="flex justify-between text-sm py-1.5">
               <span className="text-slate-500">Subtotal (excl. GST)</span>
-              <span className="font-semibold text-navy-DEFAULT">₹{(basePremium + addonTotal * 12).toLocaleString('en-IN')}</span>
+              <span className="font-semibold text-navy">₹{(basePremium + addonTotal * 12).toLocaleString('en-IN')}</span>
             </div>
             <div className="flex justify-between text-sm py-1.5">
               <span className="text-slate-500">GST (18%)</span>
-              <span className="font-semibold text-navy-DEFAULT">₹{gst.toLocaleString('en-IN')}</span>
+              <span className="font-semibold text-navy">₹{gst.toLocaleString('en-IN')}</span>
             </div>
             <div className="border-t border-slate-200 my-2" />
             <div className="flex justify-between">
-              <span className="font-heading font-bold text-navy-DEFAULT">Total Payable</span>
-              <span className="font-heading text-lg font-extrabold text-navy-DEFAULT">₹{totalPremium.toLocaleString('en-IN')}</span>
+              <span className="font-heading font-bold text-navy">Total Payable</span>
+              <span className="font-heading text-lg font-extrabold text-navy">₹{totalPremium.toLocaleString('en-IN')}</span>
             </div>
           </div>
 
@@ -933,7 +933,7 @@ export default function HealthBuyPage() {
 
           <button
             onClick={() => goTo(12)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white hover:-translate-y-0.5 transition-transform"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform"
           >
             Proceed to Pay →
           </button>
@@ -946,9 +946,9 @@ export default function HealthBuyPage() {
           <div className="inline-flex items-center gap-2 bg-health-bg text-health-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-xl mb-3">
             💳 Secure Payment
           </div>
-          <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT mb-1.5">Complete Your Payment</h2>
+          <h2 className="font-heading text-[22px] font-extrabold text-navy mb-1.5">Complete Your Payment</h2>
           <p className="text-sm text-slate-500 mb-5">
-            Total: <strong className="text-navy-DEFAULT">₹{totalPremium.toLocaleString('en-IN')}</strong> <span className="text-slate-400 text-xs">(incl. 18% GST · Annual)</span>
+            Total: <strong className="text-navy">₹{totalPremium.toLocaleString('en-IN')}</strong> <span className="text-slate-400 text-xs">(incl. 18% GST · Annual)</span>
           </p>
 
           <div className="bg-slate-50 rounded-xl px-4 py-2.5 text-xs text-slate-500 text-center mb-5">
@@ -966,16 +966,16 @@ export default function HealthBuyPage() {
                 key={i}
                 onClick={() => setPayMethod(i)}
                 className={`flex items-center gap-3.5 p-4 border-[1.5px] rounded-2xl cursor-pointer transition-all ${
-                  payMethod === i ? 'border-health-DEFAULT bg-health-bg' : 'border-slate-100 bg-white hover:border-health-DEFAULT'
+                  payMethod === i ? 'border-health bg-health-bg' : 'border-slate-100 bg-white hover:border-health'
                 }`}
               >
                 <div className="text-2xl">{m.ico}</div>
                 <div>
-                  <div className="font-heading text-sm font-bold text-navy-DEFAULT">{m.name}</div>
+                  <div className="font-heading text-sm font-bold text-navy">{m.name}</div>
                   <div className="text-xs text-slate-400">{m.sub}</div>
                 </div>
                 <div className={`ml-auto w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                  payMethod === i ? 'border-health-DEFAULT bg-health-DEFAULT' : 'border-slate-300'
+                  payMethod === i ? 'border-health bg-health' : 'border-slate-300'
                 }`}>
                   {payMethod === i && <div className="w-2 h-2 bg-white rounded-full" />}
                 </div>
@@ -992,7 +992,7 @@ export default function HealthBuyPage() {
           {/* Countdown */}
           <div className="text-center mb-6">
             <p className="text-xs text-slate-400 mb-2">Your quote is reserved for</p>
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full border-4 border-health-DEFAULT bg-health-bg font-heading text-lg font-extrabold text-health-dark">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full border-4 border-health bg-health-bg font-heading text-lg font-extrabold text-health-dark">
               {fmtCountdown(countdown)}
             </div>
             <p className="text-xs text-slate-400 mt-2">After this, premiums may change</p>
@@ -1000,7 +1000,7 @@ export default function HealthBuyPage() {
 
           <button
             onClick={() => goTo(13)}
-            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white hover:-translate-y-0.5 transition-transform mb-3"
+            className="w-full py-3.5 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform mb-3"
           >
             Pay ₹{totalPremium.toLocaleString('en-IN')} Securely →
           </button>
@@ -1013,7 +1013,7 @@ export default function HealthBuyPage() {
         <div className="max-w-[480px] mx-auto px-5 py-8">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-3xl">🔐</span>
-            <h2 className="font-heading text-[22px] font-extrabold text-navy-DEFAULT">KYC Verification</h2>
+            <h2 className="font-heading text-[22px] font-extrabold text-navy">KYC Verification</h2>
           </div>
           <p className="text-sm text-slate-500 mb-5">As per IRDAI guidelines, KYC is mandatory to issue your health policy.</p>
 
@@ -1031,11 +1031,11 @@ export default function HealthBuyPage() {
               key={item.key}
               onClick={() => item.set(true)}
               className={`border-2 rounded-2xl p-5 text-center cursor-pointer transition-all mb-4 ${
-                item.state ? 'border-health-DEFAULT bg-health-bg' : 'border-dashed border-slate-300 bg-white hover:border-health-DEFAULT'
+                item.state ? 'border-health bg-health-bg' : 'border-dashed border-slate-300 bg-white hover:border-health'
               }`}
             >
               <div className="text-3xl mb-2">{item.state ? '✅' : item.ico}</div>
-              <div className="font-heading text-sm font-bold text-navy-DEFAULT mb-1">{item.title}</div>
+              <div className="font-heading text-sm font-bold text-navy mb-1">{item.title}</div>
               <p className={`text-xs mb-4 ${item.state ? 'text-health-dark font-semibold' : 'text-slate-400'}`}>
                 {item.state ? 'Uploaded successfully ✓' : item.sub}
               </p>
@@ -1049,7 +1049,7 @@ export default function HealthBuyPage() {
           ))}
 
           <div className="flex items-start gap-2.5 text-[12.5px] text-slate-500 leading-snug mb-6">
-            <input type="checkbox" checked={kycConsent} onChange={e => setKycConsent(e.target.checked)} className="mt-0.5 flex-shrink-0 accent-health-DEFAULT" />
+            <input type="checkbox" checked={kycConsent} onChange={e => setKycConsent(e.target.checked)} className="mt-0.5 flex-shrink-0 accent-health" />
             <span>I consent to FatakSecure and its insurance partner collecting and verifying my Aadhaar and PAN as per IRDAI KYC norms.</span>
           </div>
 
@@ -1057,14 +1057,14 @@ export default function HealthBuyPage() {
           <div className="bg-white rounded-2xl shadow-s2 border border-slate-100 p-4 flex items-center justify-between">
             <div>
               <div className="text-[11px] text-slate-400">KYC Status</div>
-              <div className="font-heading text-sm font-bold text-navy-DEFAULT">
+              <div className="font-heading text-sm font-bold text-navy">
                 {[kycFront, kycBack, kycPan].filter(Boolean).length} of 3 uploaded
               </div>
             </div>
             <button
               disabled={!kycFront || !kycBack || !kycPan || !kycConsent}
               onClick={() => goTo(14)}
-              className="py-3 px-6 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
+              className="py-3 px-6 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 transition-transform"
             >
               Verify KYC →
             </button>
@@ -1077,10 +1077,10 @@ export default function HealthBuyPage() {
         <div className="max-w-[480px] mx-auto px-5 py-20 text-center">
           <div className="relative w-20 h-20 mx-auto mb-6">
             <div className="absolute inset-0 rounded-full border-4 border-health-bg" />
-            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-health-DEFAULT animate-spin" />
+            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-health animate-spin" />
             <div className="absolute inset-0 flex items-center justify-center text-2xl">🔐</div>
           </div>
-          <h3 className="font-heading text-xl font-extrabold text-navy-DEFAULT mb-2">Verifying your KYC…</h3>
+          <h3 className="font-heading text-xl font-extrabold text-navy mb-2">Verifying your KYC…</h3>
           <p className="text-slate-400 text-sm mb-8">Please do not close or refresh this screen.</p>
 
           <div className="bg-white rounded-2xl border border-slate-100 p-5 text-left max-w-xs mx-auto">
@@ -1093,7 +1093,7 @@ export default function HealthBuyPage() {
             ].map((s, i) => (
               <div key={i} className={`flex items-center gap-3 text-sm ${i > 0 ? 'mt-3' : ''}`}>
                 <span className="text-base">{s.icon}</span>
-                <span className={s.done ? 'text-navy-DEFAULT font-semibold' : 'text-slate-400'}>{s.text}</span>
+                <span className={s.done ? 'text-navy font-semibold' : 'text-slate-400'}>{s.text}</span>
               </div>
             ))}
           </div>
@@ -1106,11 +1106,11 @@ export default function HealthBuyPage() {
           {/* Congrats header */}
           <div className="text-center mb-8">
             <div className="text-5xl mb-4">🎉</div>
-            <h2 className="font-heading text-[28px] font-extrabold text-navy-DEFAULT mb-2">Congratulations!</h2>
+            <h2 className="font-heading text-[28px] font-extrabold text-navy mb-2">Congratulations!</h2>
             <p className="text-slate-500 text-sm mb-4">
               Your <strong>{quote.insurer} {quote.plan}</strong> policy has been issued successfully. You are now covered!
             </p>
-            <div className="inline-block bg-health-bg border-2 border-health-DEFAULT/30 rounded-xl px-6 py-2 font-heading text-lg font-extrabold text-health-dark">
+            <div className="inline-block bg-health-bg border-2 border-health/30 rounded-xl px-6 py-2 font-heading text-lg font-extrabold text-health-dark">
               {quote.insurer}
             </div>
           </div>
@@ -1129,7 +1129,7 @@ export default function HealthBuyPage() {
             ].map(([k, v, green]) => (
               <div key={k as string} className="flex items-center justify-between px-5 py-3 border-b border-slate-50 last:border-0">
                 <span className="text-xs text-slate-500 font-medium">{k}</span>
-                <span className={`text-xs font-extrabold ${green ? 'text-emerald-500' : 'text-navy-DEFAULT'}`}>{v}</span>
+                <span className={`text-xs font-extrabold ${green ? 'text-emerald-500' : 'text-navy'}`}>{v}</span>
               </div>
             ))}
           </div>
@@ -1137,11 +1137,11 @@ export default function HealthBuyPage() {
           {/* Policy doc card */}
           <div className="bg-white border border-slate-100 rounded-2xl p-5 text-center mb-4">
             <div className="text-3xl mb-2">📑</div>
-            <h4 className="font-heading text-sm font-bold text-navy-DEFAULT mb-2">Your Health Insurance Policy</h4>
+            <h4 className="font-heading text-sm font-bold text-navy mb-2">Your Health Insurance Policy</h4>
             <p className="text-xs text-slate-400 mb-4">Your policy document is being generated. You will receive it on WhatsApp and email within 30 minutes.</p>
             <button
               onClick={() => showPage('health')}
-              className="w-full max-w-xs mx-auto block py-3 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health-DEFAULT to-health-dark text-white hover:-translate-y-0.5 transition-transform"
+              className="w-full max-w-xs mx-auto block py-3 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform"
             >
               📥 View My Policy
             </button>
@@ -1153,7 +1153,7 @@ export default function HealthBuyPage() {
           </div>
 
           <div className="text-center">
-            <button onClick={() => showPage('home')} className="text-sm font-semibold text-health-DEFAULT bg-transparent border-none cursor-pointer hover:underline">
+            <button onClick={() => showPage('home')} className="text-sm font-semibold text-health bg-transparent border-none cursor-pointer hover:underline">
               ← Back to Home
             </button>
           </div>

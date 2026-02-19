@@ -20,11 +20,11 @@ export default function Button({
   type = 'button',
 }: ButtonProps) {
   const base =
-    'inline-flex items-center gap-2 font-heading font-bold border-none cursor-pointer rounded-full transition-all duration-200 whitespace-nowrap no-underline'
+    'inline-flex items-center gap-2 font-heading font-bold cursor-pointer rounded-full transition-all duration-200 whitespace-nowrap no-underline'
 
   const variants = {
     primary:
-      'bg-gradient-to-br from-orange-DEFAULT to-orange-dark text-white shadow-orange hover:shadow-orange-hover hover:-translate-y-0.5',
+      'bg-gradient-to-br from-orange to-orange-dark text-white shadow-orange hover:shadow-orange-hover hover:-translate-y-0.5 border-none',
     ghost:
       'bg-white/10 border-[1.5px] border-white/[0.28] text-white hover:bg-white/[0.18] hover:border-white/50',
   }

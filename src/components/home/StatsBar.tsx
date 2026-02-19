@@ -11,8 +11,8 @@ export default function StatsBar() {
       <div className="max-w-[1000px] mx-auto grid grid-cols-4 text-center">
         {STATS.map((stat, i) => (
           <div key={stat.label} className={`py-2.5 px-4 ${i < STATS.length - 1 ? 'border-r border-slate-100' : ''}`}>
-            <div className="font-heading text-[44px] font-extrabold text-navy-DEFAULT leading-none tracking-[-1.5px]">
-              {stat.num}<span className="text-orange-DEFAULT">{stat.suffix}</span>
+            <div className="font-heading text-[44px] font-extrabold text-navy leading-none tracking-[-1.5px]">
+              {stat.num}<span className="text-orange">{stat.suffix}</span>
             </div>
             <div className="text-[13px] text-slate-400 mt-1.5 font-medium">{stat.label}</div>
           </div>

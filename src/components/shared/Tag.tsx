@@ -6,12 +6,12 @@ interface TagProps {
 }
 
 const colorMap = {
-  orange: 'text-orange-DEFAULT',
-  teal: 'text-teal-DEFAULT',
-  health: 'text-health-DEFAULT',
-  life: 'text-life-DEFAULT',
-  motor: 'text-motor-DEFAULT',
-  travel: 'text-travel-DEFAULT',
+  orange: 'text-orange',
+  teal: 'text-teal',
+  health: 'text-health',
+  life: 'text-life',
+  motor: 'text-motor',
+  travel: 'text-travel',
 }
 
 export default function Tag({ children, color = 'orange', centered = false, noBar = false }: TagProps) {

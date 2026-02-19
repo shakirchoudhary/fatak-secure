@@ -33,7 +33,7 @@ export default function HowItWorks() {
       <div className="max-w-[1180px] mx-auto">
         <div className="text-center mb-0">
           <Tag centered noBar>Process</Tag>
-          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT mb-3">
+          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-3">
             Get Insured in 4 Simple Steps
           </h2>
           <p className="text-base text-slate-500 leading-[1.78] max-w-[520px] mx-auto">
@@ -43,7 +43,7 @@ export default function HowItWorks() {
 
         <div className="grid grid-cols-4 mt-14 relative">
           {/* Connector line */}
-          <div className="absolute top-[34px] left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-teal-DEFAULT to-orange-DEFAULT rounded z-0" />
+          <div className="absolute top-[34px] left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-teal to-orange rounded z-0" />
 
           {STEPS.map((step) => (
             <div key={step.n} className="text-center px-4 relative z-10 group">
@@ -53,7 +53,7 @@ export default function HowItWorks() {
               >
                 {step.n}
               </div>
-              <h4 className="font-heading text-[15px] font-bold text-navy-DEFAULT mb-1.5">{step.title}</h4>
+              <h4 className="font-heading text-[15px] font-bold text-navy mb-1.5">{step.title}</h4>
               <p className="text-[13px] text-slate-500 leading-[1.65]">{step.desc}</p>
             </div>
           ))}

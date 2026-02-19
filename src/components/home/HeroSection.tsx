@@ -4,8 +4,8 @@ import { usePage } from '@/lib/PageContext'
 import Button from '@/components/shared/Button'
 
 const HERO_CARDS = [
-  { emoji: '❤️‍🩹', title: 'Health Insurance', desc: 'Family floater from ₹299/mo', badge: 'Most Popular', badgeCls: 'bg-teal-DEFAULT/20 text-teal-light', page: 'health' as const, anim: 'animate-float1' },
-  { emoji: '🛡️', title: 'Term Life', desc: '₹1 Crore from ₹499/year', badge: 'Best Value', badgeCls: 'bg-orange-DEFAULT/20 text-[#FFAA80]', page: 'life' as const, anim: 'animate-float2' },
+  { emoji: '❤️‍🩹', title: 'Health Insurance', desc: 'Family floater from ₹299/mo', badge: 'Most Popular', badgeCls: 'bg-teal/20 text-teal-light', page: 'health' as const, anim: 'animate-float1' },
+  { emoji: '🛡️', title: 'Term Life', desc: '₹1 Crore from ₹499/year', badge: 'Best Value', badgeCls: 'bg-orange/20 text-[#FFAA80]', page: 'life' as const, anim: 'animate-float2' },
   { emoji: '🚗', title: 'Motor Insurance', desc: 'Instant renewal in 2 min', badge: 'Quick Renew', badgeCls: 'bg-gold/20 text-gold', page: 'motor' as const, anim: 'animate-float3' },
   { emoji: '✈️', title: 'Travel Insurance', desc: 'International from ₹199/trip', badge: 'New', badgeCls: 'bg-[#8B5CF6]/20 text-[#C4B5FD]', page: 'travel' as const, anim: 'animate-float1' },
 ]
@@ -48,15 +48,15 @@ export default function HeroSection() {
 
         {/* Text side */}
         <div>
-          <div className="inline-flex items-center gap-2 bg-teal-DEFAULT/[0.12] border border-teal-DEFAULT/[0.28] text-teal-light text-xs font-semibold px-4 py-1.5 rounded-2xl mb-5">
-            <span className="w-[7px] h-[7px] bg-teal-DEFAULT rounded-full animate-blink" />
+          <div className="inline-flex items-center gap-2 bg-teal/[0.12] border border-teal/[0.28] text-teal-light text-xs font-semibold px-4 py-1.5 rounded-2xl mb-5">
+            <span className="w-[7px] h-[7px] bg-teal rounded-full animate-blink" />
             Now Live — India's Fastest Insurance Platform
           </div>
 
           <h1 className="font-heading text-[clamp(36px,4.8vw,58px)] font-extrabold leading-[1.07] tracking-[-1.8px] text-white mb-4">
             Protection That's<br />
-            <span className="text-orange-DEFAULT">Simple,</span>{' '}
-            <span className="text-teal-DEFAULT">Honest</span><br />
+            <span className="text-orange">Simple,</span>{' '}
+            <span className="text-teal">Honest</span><br />
             &amp; Instant.
           </h1>
 

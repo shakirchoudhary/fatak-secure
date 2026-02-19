@@ -91,8 +91,8 @@ export default function LifePage() {
               <span className="text-white/25">›</span>
               <span className="text-white/70">Life Insurance</span>
             </div>
-            <div className="inline-flex items-center gap-2 bg-life-DEFAULT/[0.15] border border-life-DEFAULT/30 text-[#F9A8D4] text-xs font-semibold px-4 py-1.5 rounded-2xl mb-5">
-              <span className="w-[7px] h-[7px] bg-life-DEFAULT rounded-full animate-blink" />
+            <div className="inline-flex items-center gap-2 bg-life/[0.15] border border-life/30 text-[#F9A8D4] text-xs font-semibold px-4 py-1.5 rounded-2xl mb-5">
+              <span className="w-[7px] h-[7px] bg-life rounded-full animate-blink" />
               Protect Your Family's Future
             </div>
             <h1 className="font-heading text-[clamp(32px,4.5vw,54px)] font-extrabold leading-[1.08] tracking-[-1.5px] text-white mb-4">
@@ -141,7 +141,7 @@ export default function LifePage() {
               ))}
             </div>
             <button
-              className="w-full bg-gradient-to-br from-orange-DEFAULT to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200 text-sm"
+              className="w-full bg-gradient-to-br from-orange to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200 text-sm"
               onClick={() => showPage('life-buy')}
             >
               Get Life Cover →
@@ -156,7 +156,7 @@ export default function LifePage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="text-center mb-12">
             <Tag color="life">Term Life Plans</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold text-navy-DEFAULT mb-3">Choose Your Life Cover</h2>
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold text-navy mb-3">Choose Your Life Cover</h2>
             <p className="text-slate-500 max-w-[520px] mx-auto">Pure term plans — affordable, high cover, no investment component.</p>
           </div>
           <div className="grid grid-cols-3 gap-6">
@@ -164,7 +164,7 @@ export default function LifePage() {
               <div
                 key={plan.name}
                 className={`relative rounded-2xl border p-6 flex flex-col transition-all hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.09)] ${
-                  plan.isPopular ? 'border-life-DEFAULT shadow-[0_8px_40px_rgba(236,72,153,0.15)]' : 'border-slate-200'
+                  plan.isPopular ? 'border-life shadow-[0_8px_40px_rgba(236,72,153,0.15)]' : 'border-slate-200'
                 }`}
               >
                 {plan.isPopular && plan.badge && (
@@ -173,10 +173,10 @@ export default function LifePage() {
                   </div>
                 )}
                 <div className="text-[11px] font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--life)' }}>{plan.type}</div>
-                <div className="font-heading text-[20px] font-extrabold text-navy-DEFAULT mb-1">{plan.name}</div>
+                <div className="font-heading text-[20px] font-extrabold text-navy mb-1">{plan.name}</div>
                 <div className="text-[13px] text-slate-500 mb-4">{plan.desc}</div>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-heading text-[32px] font-extrabold text-navy-DEFAULT">{plan.price}</span>
+                  <span className="font-heading text-[32px] font-extrabold text-navy">{plan.price}</span>
                   <span className="text-[14px] text-slate-400">{plan.period}</span>
                 </div>
                 <div className="h-px bg-slate-100 my-4" />
@@ -208,13 +208,13 @@ export default function LifePage() {
         <div className="max-w-[1180px] mx-auto">
           <div className="mb-10">
             <Tag color="teal">Why Choose Us</Tag>
-            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT">Why Millions Choose FatakSecure for Life Cover</h2>
+            <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">Why Millions Choose FatakSecure for Life Cover</h2>
           </div>
           <div className="grid grid-cols-3 gap-5">
             {WHY.map((w) => (
               <div key={w.title} className="p-5 rounded-2xl border border-slate-100 bg-white hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)] transition-all">
                 <div className="text-3xl mb-3">{w.ico}</div>
-                <h4 className="font-heading font-bold text-[15px] text-navy-DEFAULT mb-1.5">{w.title}</h4>
+                <h4 className="font-heading font-bold text-[15px] text-navy mb-1.5">{w.title}</h4>
                 <p className="text-[13px] text-slate-500 leading-[1.6]">{w.desc}</p>
               </div>
             ))}
@@ -226,7 +226,7 @@ export default function LifePage() {
       <section className="py-[88px] px-[5%] bg-white">
         <div className="max-w-[700px] mx-auto">
           <Tag color="life">FAQ</Tag>
-          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy-DEFAULT mb-8">Life Insurance FAQs</h2>
+          <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-8">Life Insurance FAQs</h2>
           <FAQ items={FAQS} />
         </div>
       </section>
