@@ -1,8 +1,8 @@
 'use client'
 
-import { usePage } from '@/lib/PageContext'
-import Tag from '@/components/shared/Tag'
-import FAQ from '@/components/shared/FAQ'
+import { useRouter } from 'next/navigation'
+import Tag from '@/components/ui/Tag'
+import FAQ from '@/components/ui/FAQ'
 
 const PLANS = [
   {
@@ -89,7 +89,7 @@ const FAQS = [
 ]
 
 export default function TravelPage() {
-  const { showPage } = usePage()
+  const router = useRouter()
 
   return (
     <div className="pt-16">
@@ -98,7 +98,7 @@ export default function TravelPage() {
         <div className="max-w-[1180px] mx-auto grid grid-cols-[1fr_auto] gap-12 items-center">
           <div>
             <div className="text-[12px] text-white/50 mb-4">
-              <button onClick={() => showPage('home')} className="text-white/50 hover:text-white bg-transparent border-none cursor-pointer">Home</button>
+              <button onClick={() => router.push('/')} className="text-white/50 hover:text-white bg-transparent border-none cursor-pointer">Home</button>
               <span className="mx-2 text-white/30">›</span>
               <span className="text-white/70">Travel Insurance</span>
             </div>
@@ -121,7 +121,7 @@ export default function TravelPage() {
             </div>
             <div className="flex items-center gap-3">
               <button
-                onClick={() => showPage('home')}
+                onClick={() => router.push('/')}
                 className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
               >
                 Get Travel Quote →
@@ -147,7 +147,7 @@ export default function TravelPage() {
               ))}
             </div>
             <button
-              onClick={() => showPage('home')}
+              onClick={() => router.push('/')}
               className="w-full flex items-center justify-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3 px-5 text-[14px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 transition-all border-none cursor-pointer mb-3"
             >
               Get Travel Insurance →
@@ -195,7 +195,7 @@ export default function TravelPage() {
                 <button
                   className="w-full py-3 rounded-xl text-[14px] font-heading font-bold border-none cursor-pointer transition-all hover:opacity-90"
                   style={plan.btnStyle}
-                  onClick={() => showPage('home')}
+                  onClick={() => router.push('/')}
                 >
                   {plan.btnText}
                 </button>
@@ -263,7 +263,7 @@ export default function TravelPage() {
           <p className="text-[16px] text-white/[0.65] mb-8">Instant policy. 150+ countries. 24/7 emergency support. Schengen compliant.</p>
           <div className="flex items-center justify-center gap-4">
             <button
-              onClick={() => showPage('home')}
+              onClick={() => router.push('/')}
               className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
             >
               ✈️ Get Travel Insurance →

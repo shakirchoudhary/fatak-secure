@@ -1,8 +1,8 @@
 'use client'
 
-import { usePage } from '@/lib/PageContext'
-import Tag from '@/components/shared/Tag'
-import FAQ from '@/components/shared/FAQ'
+import { useRouter } from 'next/navigation'
+import Tag from '@/components/ui/Tag'
+import FAQ from '@/components/ui/FAQ'
 
 const LIFE_PLANS = [
   {
@@ -75,7 +75,7 @@ const FAQS = [
 ]
 
 export default function LifePage() {
-  const { showPage } = usePage()
+  const router = useRouter()
 
   return (
     <div>
@@ -87,7 +87,7 @@ export default function LifePage() {
         <div className="max-w-[1180px] mx-auto grid grid-cols-2 gap-14 items-center relative z-10 w-full">
           <div>
             <div className="flex items-center gap-2 text-xs text-white/[0.45] mb-4">
-              <button onClick={() => showPage('home')} className="hover:text-white/80 transition-colors bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
+              <button onClick={() => router.push('/')} className="hover:text-white/80 transition-colors bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
               <span className="text-white/25">›</span>
               <span className="text-white/70">Life Insurance</span>
             </div>
@@ -111,13 +111,13 @@ export default function LifePage() {
             </div>
             <div className="flex gap-3.5">
               <button
-                onClick={() => showPage('life-buy')}
+                onClick={() => router.push('/life/buy')}
                 className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
               >
                 Calculate My Premium →
               </button>
               <button
-                onClick={() => showPage('life-buy')}
+                onClick={() => router.push('/life/buy')}
                 className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border-[1.5px] border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer"
               >
                 Compare Plans
@@ -142,7 +142,7 @@ export default function LifePage() {
             </div>
             <button
               className="w-full bg-gradient-to-br from-orange to-orange-dark text-white font-heading font-bold py-3.5 rounded-2xl border-none cursor-pointer hover:-translate-y-0.5 transition-transform duration-200 text-sm"
-              onClick={() => showPage('life-buy')}
+              onClick={() => router.push('/life/buy')}
             >
               Get Life Cover →
             </button>
@@ -193,7 +193,7 @@ export default function LifePage() {
                 <button
                   className="w-full py-3 rounded-xl text-[14px] font-heading font-bold border-none cursor-pointer transition-all hover:opacity-90"
                   style={plan.btnStyle}
-                  onClick={() => showPage('life-buy')}
+                  onClick={() => router.push('/life/buy')}
                 >
                   Buy {plan.name}
                 </button>
@@ -240,14 +240,14 @@ export default function LifePage() {
           <p className="text-[16px] text-white/[0.65] mb-8">₹1 Crore life cover. Instant policy. 99% claim settlement.</p>
           <div className="flex items-center justify-center gap-4">
             <button
-              onClick={() => showPage('life-buy')}
+              onClick={() => router.push('/life/buy')}
               className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
             >
               🛡️ Get Life Cover →
             </button>
             <button
               className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white border-[1.5px] border-white/[0.28] bg-white/[0.1] py-3 px-6 text-[14.5px] hover:bg-white/[0.18] hover:border-white/50 transition-all cursor-pointer"
-              onClick={() => showPage('life-buy')}
+              onClick={() => router.push('/life/buy')}
             >
               Calculate Premium
             </button>

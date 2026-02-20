@@ -1,6 +1,6 @@
 'use client'
 
-import { usePage } from '@/lib/PageContext'
+import { useRouter } from 'next/navigation'
 import type { PageId } from '@/types'
 
 const PRODUCTS = [
@@ -11,12 +11,12 @@ const PRODUCTS = [
 ]
 
 export default function Navbar() {
-  const { showPage, gotoSection } = usePage()
+  const router = useRouter()
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[300] h-16 flex items-center justify-between px-[5%] bg-[#44226e] border-b border-white/[0.07]">
       {/* Brand */}
-      <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => showPage('home')}>
+      <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => router.push('/')}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/fatak-secure-logo.svg"
@@ -32,7 +32,7 @@ export default function Navbar() {
         <li>
           <button
             className="text-[13.5px] font-medium text-white px-3 py-1.5 rounded-lg cursor-pointer transition-all duration-200 bg-white/[0.09] border-none font-body"
-            onClick={() => showPage('home')}
+            onClick={() => router.push('/')}
           >
             Home
           </button>
@@ -51,7 +51,7 @@ export default function Navbar() {
               <div
                 key={p.label}
                 className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl cursor-pointer transition-colors duration-200 text-white/70 hover:bg-white/[0.08] hover:text-white"
-                onClick={() => showPage(p.page)}
+                onClick={() => router.push('/' + p.page)}
               >
                 <span className="text-lg w-7 text-center flex-shrink-0">{p.emoji}</span>
                 <div>
@@ -67,7 +67,7 @@ export default function Navbar() {
         <li>
           <button
             className="text-[13.5px] font-medium text-white/[0.68] px-3 py-1.5 rounded-lg cursor-pointer transition-all duration-200 bg-transparent border-none font-body hover:text-white hover:bg-white/[0.09]"
-            onClick={() => gotoSection('why-home')}
+            onClick={() => router.push('/#why-home')}
           >
             Why Us
           </button>
@@ -77,7 +77,7 @@ export default function Navbar() {
         <li>
           <button
             className="text-[13.5px] font-medium text-white/[0.68] px-3 py-1.5 rounded-lg cursor-pointer transition-all duration-200 bg-transparent border-none font-body hover:text-white hover:bg-white/[0.09]"
-            onClick={() => gotoSection('how-home')}
+            onClick={() => router.push('/#how-home')}
           >
             How It Works
           </button>
@@ -87,7 +87,7 @@ export default function Navbar() {
         <li>
           <button
             className="text-[13.5px] font-medium text-white/[0.68] px-3 py-1.5 rounded-lg cursor-pointer transition-all duration-200 bg-transparent border-none font-body hover:text-white hover:bg-white/[0.09]"
-            onClick={() => gotoSection('faq-home')}
+            onClick={() => router.push('/#faq-home')}
           >
             FAQ
           </button>
@@ -97,7 +97,7 @@ export default function Navbar() {
         <li>
           <button
             className="text-[13.5px] font-medium text-white/[0.68] px-3 py-1.5 rounded-lg cursor-pointer transition-all duration-200 bg-transparent border-none font-body hover:text-white hover:bg-white/[0.09]"
-            onClick={() => showPage('glossary')}
+            onClick={() => router.push('/glossary')}
           >
             Glossary
           </button>
@@ -116,7 +116,7 @@ export default function Navbar() {
         </a>
         <button
           className="inline-flex items-center gap-2 font-heading font-bold border-none cursor-pointer rounded-full transition-all whitespace-nowrap text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-[9px] px-5 text-[13px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)]"
-          onClick={() => showPage('health-buy')}
+          onClick={() => router.push('/health/buy')}
         >
           Get Insured
         </button>

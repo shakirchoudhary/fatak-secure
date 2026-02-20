@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { usePage } from '@/lib/PageContext'
-import Button from '@/components/shared/Button'
+import { useRouter } from 'next/navigation'
+import Button from '@/components/ui/Button'
 import { GLOSSARY_SECTIONS } from '@/lib/data'
 
 const TAG_COLORS: Record<string, { bg: string; color: string }> = {
@@ -14,7 +14,7 @@ const TAG_COLORS: Record<string, { bg: string; color: string }> = {
 }
 
 export default function GlossaryPage() {
-  const { showPage } = usePage()
+  const router = useRouter()
   const [search, setSearch] = useState('')
 
   const filteredSections = GLOSSARY_SECTIONS.map(section => ({
@@ -32,7 +32,7 @@ export default function GlossaryPage() {
       {/* Header */}
       <div className="bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] py-20 px-[5%] text-center">
         <div className="flex items-center justify-center gap-2 text-xs text-white/[0.45] mb-4">
-          <button onClick={() => showPage('home')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
+          <button onClick={() => router.push('/')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
           <span className="text-white/25">›</span>
           <span className="text-white/70">Insurance Glossary</span>
         </div>
@@ -115,8 +115,8 @@ export default function GlossaryPage() {
           </h2>
           <p className="text-white/70 mb-8">Now that you know the terms, choose wisely. Simple. Fast. Trusted.</p>
           <div className="flex justify-center gap-3.5 flex-wrap">
-            <Button size="lg" onClick={() => showPage('health-buy')}>❤️‍🩹 Health Insurance →</Button>
-            <Button variant="ghost" onClick={() => showPage('motor-buy')}>🚗 Motor Insurance</Button>
+            <Button size="lg" onClick={() => router.push('/health/buy')}>❤️‍🩹 Health Insurance →</Button>
+            <Button variant="ghost" onClick={() => router.push('/motor/buy')}>🚗 Motor Insurance</Button>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 'use client'
 
-import { usePage } from '@/lib/PageContext'
-import Button from '@/components/shared/Button'
+import { useRouter } from 'next/navigation'
+import Button from '@/components/ui/Button'
 
 const HERO_CARDS = [
   { emoji: '❤️‍🩹', title: 'Health Insurance', desc: 'Family floater from ₹299/mo', badge: 'Most Popular', badgeCls: 'bg-teal/20 text-teal-light', page: 'health' as const, anim: 'animate-float1' },
@@ -18,7 +18,7 @@ const TRUST_PILLS = [
 ]
 
 export default function HeroSection() {
-  const { showPage } = usePage()
+  const router = useRouter()
 
   return (
     <section className="min-h-screen pt-[90px] pb-[72px] px-[5%] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
@@ -34,7 +34,7 @@ export default function HeroSection() {
             <div
               key={card.title}
               className={`bg-white/[0.07] border border-white/[0.13] backdrop-blur-xl rounded-[18px] p-5 px-4 text-white cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_48px_rgba(0,0,0,0.28)] hover:bg-white/[0.12] ${card.anim}`}
-              onClick={() => showPage(card.page)}
+              onClick={() => router.push('/' + card.page)}
             >
               <span className="text-[28px] mb-2.5 block">{card.emoji}</span>
               <div className="font-heading text-[13.5px] font-bold mb-1">{card.title}</div>

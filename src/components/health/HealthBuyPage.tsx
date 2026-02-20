@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { usePage } from '@/lib/PageContext'
+import { useRouter } from 'next/navigation'
 
 type Screen = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
 
@@ -85,7 +85,7 @@ const ADDONS = [
 const STATES = ['Maharashtra', 'Delhi', 'Karnataka', 'Tamil Nadu', 'Gujarat', 'Rajasthan', 'Uttar Pradesh', 'West Bengal', 'Kerala', 'Punjab']
 
 export default function HealthBuyPage() {
-  const { showPage } = usePage()
+  const router = useRouter()
   const [screen, setScreen] = useState<Screen>(0)
   const [history, setHistory] = useState<Screen[]>([])
   const topRef = useRef<HTMLDivElement>(null)
@@ -159,7 +159,7 @@ export default function HealthBuyPage() {
       setScreen(last as Screen)
       setTimeout(() => topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50)
     } else {
-      showPage('health')
+      router.push('/health')
     }
   }
 
@@ -1140,7 +1140,7 @@ export default function HealthBuyPage() {
             <h4 className="font-heading text-sm font-bold text-navy mb-2">Your Health Insurance Policy</h4>
             <p className="text-xs text-slate-400 mb-4">Your policy document is being generated. You will receive it on WhatsApp and email within 30 minutes.</p>
             <button
-              onClick={() => showPage('health')}
+              onClick={() => router.push('/health')}
               className="w-full max-w-xs mx-auto block py-3 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-health to-health-dark text-white hover:-translate-y-0.5 transition-transform"
             >
               📥 View My Policy
@@ -1153,7 +1153,7 @@ export default function HealthBuyPage() {
           </div>
 
           <div className="text-center">
-            <button onClick={() => showPage('home')} className="text-sm font-semibold text-health bg-transparent border-none cursor-pointer hover:underline">
+            <button onClick={() => router.push('/')} className="text-sm font-semibold text-health bg-transparent border-none cursor-pointer hover:underline">
               ← Back to Home
             </button>
           </div>

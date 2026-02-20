@@ -1,9 +1,9 @@
 'use client'
 
-import { usePage } from '@/lib/PageContext'
+import { useRouter } from 'next/navigation'
 
 export default function Footer() {
-  const { showPage } = usePage()
+  const router = useRouter()
 
   return (
     <footer className="bg-[#44226e] text-white pt-16 pb-8">
@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-4 gap-10 mb-12 pb-12 border-b border-white/[0.08]">
           {/* Brand */}
           <div>
-            <div className="mb-4 cursor-pointer" onClick={() => showPage('home')}>
+            <div className="mb-4 cursor-pointer" onClick={() => router.push('/')}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/fatak-secure-logo.svg"
@@ -59,7 +59,7 @@ export default function Footer() {
               ].map((item) => (
                 <li key={item.label}>
                   <button
-                    onClick={() => showPage(item.page)}
+                    onClick={() => router.push('/' + item.page)}
                     className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors bg-transparent border-none cursor-pointer font-body text-left"
                   >
                     {item.label}

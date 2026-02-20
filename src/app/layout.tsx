@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import '@/styles/globals.css'
-import { PageProvider } from '@/lib/PageContext'
 
 export const metadata: Metadata = {
   title: 'FatakSecure – Insurance Made Simple | A FatakPay Product',
-  description: 'India\'s fastest insurance platform. Compare health, life, motor & travel insurance from 20+ insurers. IRDAI approved. Policy in 2 minutes.',
+  description: "India's fastest insurance platform. Compare health, life, motor & travel insurance from 20+ insurers. IRDAI approved. Policy in 2 minutes.",
   keywords: 'health insurance, car insurance, bike insurance, term life insurance, travel insurance, IRDAI, FatakPay, India',
   openGraph: {
     title: 'FatakSecure – Insurance Made Simple',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
     <html lang="en">
@@ -28,9 +28,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <PageProvider>
-          {children}
-        </PageProvider>
+        {children}
       </body>
     </html>
   )

@@ -1,5 +1,5 @@
-import Tag from '@/components/shared/Tag'
-import FAQ from '@/components/shared/FAQ'
+import Tag from '@/components/ui/Tag'
+import FAQ from '@/components/ui/FAQ'
 import { FAQ_ITEMS } from '@/lib/data'
 
 export default function FAQSection() {

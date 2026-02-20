@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { usePage } from '@/lib/PageContext'
+import { useRouter } from 'next/navigation'
 
 type Screen = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
 
@@ -50,7 +50,7 @@ const DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const STATES = ['Maharashtra', 'Delhi', 'Karnataka', 'Tamil Nadu', 'Gujarat', 'Rajasthan', 'Uttar Pradesh', 'West Bengal']
 
 export default function MotorBuyPage() {
-  const { showPage } = usePage()
+  const router = useRouter()
   const [screen, setScreen] = useState<Screen>(0)
   const [history, setHistory] = useState<Screen[]>([])
   const topRef = useRef<HTMLDivElement>(null)
@@ -113,7 +113,7 @@ export default function MotorBuyPage() {
       setScreen(last as Screen)
       setTimeout(() => topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50)
     } else {
-      showPage('motor')
+      router.push('/motor')
     }
   }
 
@@ -918,7 +918,7 @@ export default function MotorBuyPage() {
             </h4>
             <p className="text-xs text-slate-400 mb-4">We will update your insurance within 1 or 2 days via email.</p>
             <button
-              onClick={() => showPage('motor')}
+              onClick={() => router.push('/motor')}
               className="w-full max-w-xs mx-auto block py-3 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-motor to-motor-dark text-white hover:-translate-y-0.5 transition-transform"
             >
               📥 View Document
@@ -926,7 +926,7 @@ export default function MotorBuyPage() {
           </div>
 
           <div className="text-center mt-4">
-            <button onClick={() => showPage('home')} className="text-sm font-semibold text-motor bg-transparent border-none cursor-pointer hover:underline">
+            <button onClick={() => router.push('/')} className="text-sm font-semibold text-motor bg-transparent border-none cursor-pointer hover:underline">
               ← Back to Home
             </button>
           </div>

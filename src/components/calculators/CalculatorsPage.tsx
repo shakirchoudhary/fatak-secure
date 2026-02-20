@@ -1,14 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-import { usePage } from '@/lib/PageContext'
-import Button from '@/components/shared/Button'
+import { useRouter } from 'next/navigation'
+import Button from '@/components/ui/Button'
 import { fmtINR, calcCar, calcBike, calcHealth } from '@/lib/calculators'
 
 type TabId = 'car' | 'bike' | 'health'
 
 export default function CalculatorsPage() {
-  const { showPage } = usePage()
+  const router = useRouter()
   const [activeTab, setActiveTab] = useState<TabId>('car')
 
   // Car state
@@ -50,7 +50,7 @@ export default function CalculatorsPage() {
       {/* Header */}
       <div className="bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] py-20 px-[5%] text-center">
         <div className="flex items-center justify-center gap-2 text-xs text-white/[0.45] mb-4">
-          <button onClick={() => showPage('home')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
+          <button onClick={() => router.push('/')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
           <span className="text-white/25">›</span>
           <span className="text-white/70">Calculators</span>
         </div>
@@ -155,7 +155,7 @@ export default function CalculatorsPage() {
                 </div>
                 <button
                   className="w-full mt-4 bg-navy text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
-                  onClick={() => showPage('motor-buy')}
+                  onClick={() => router.push('/motor/buy')}
                 >
                   Get Actual Quote →
                 </button>
@@ -222,7 +222,7 @@ export default function CalculatorsPage() {
                 </div>
                 <button
                   className="w-full mt-4 bg-navy text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
-                  onClick={() => showPage('motor-buy')}
+                  onClick={() => router.push('/motor/buy')}
                 >
                   Get Actual Quote →
                 </button>
@@ -304,7 +304,7 @@ export default function CalculatorsPage() {
                 </div>
                 <button
                   className="w-full mt-4 bg-navy text-white font-heading font-bold py-3 rounded-xl border-none cursor-pointer hover:bg-navy-mid transition-colors"
-                  onClick={() => showPage('health-buy')}
+                  onClick={() => router.push('/health/buy')}
                 >
                   Get Actual Quote →
                 </button>
@@ -314,7 +314,7 @@ export default function CalculatorsPage() {
         )}
 
         <div className="text-center mt-8 mb-12">
-          <Button onClick={() => showPage('home')}>← Back to Home</Button>
+          <Button onClick={() => router.push('/')}>← Back to Home</Button>
         </div>
       </div>
     </div>

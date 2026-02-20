@@ -1,8 +1,8 @@
 'use client'
 
-import { usePage } from '@/lib/PageContext'
-import Tag from '@/components/shared/Tag'
-import Button from '@/components/shared/Button'
+import { useRouter } from 'next/navigation'
+import Tag from '@/components/ui/Tag'
+import Button from '@/components/ui/Button'
 
 const USPS = [
   { ico: '💰', title: 'Save Up to 40% on Premiums', desc: 'We compare 20+ insurers in real-time for the best price.' },
@@ -20,7 +20,7 @@ const CARDS = [
 ]
 
 export default function WhySection() {
-  const { showPage } = usePage()
+  const router = useRouter()
 
   return (
     <section className="py-[88px] px-[5%] text-white overflow-hidden relative" style={{ background: 'linear-gradient(145deg,#2d1057,#44226e)' }} id="why-home">

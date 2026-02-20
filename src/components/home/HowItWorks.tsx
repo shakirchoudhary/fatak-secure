@@ -1,4 +1,4 @@
-import Tag from '@/components/shared/Tag'
+import Tag from '@/components/ui/Tag'
 
 const STEPS = [
   {

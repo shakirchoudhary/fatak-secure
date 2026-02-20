@@ -1,7 +1,7 @@
 'use client'
 
-import { usePage } from '@/lib/PageContext'
-import Tag from '@/components/shared/Tag'
+import { useRouter } from 'next/navigation'
+import Tag from '@/components/ui/Tag'
 import { PRODUCTS } from '@/lib/data'
 import type { PageId } from '@/types'
 
@@ -48,7 +48,7 @@ const colorConfig: Record<string, {
 }
 
 export default function ProductsGrid() {
-  const { showPage } = usePage()
+  const router = useRouter()
 
   return (
     <section className="py-[88px] px-[5%] bg-slate-50" id="home-prods">
@@ -71,7 +71,7 @@ export default function ProductsGrid() {
                 key={product.id}
                 className="bg-white rounded-[22px] p-7 pt-7 pb-6 border-[1.5px] border-slate-100 flex flex-col transition-all duration-300 cursor-pointer relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-s3"
                 style={{ '--hover-border': c.border } as React.CSSProperties}
-                onClick={() => showPage(product.page as PageId)}
+                onClick={() => router.push('/' + product.page)}
               >
                 {/* Top color bar */}
                 <div className={`absolute top-0 left-0 right-0 h-[3px] rounded-t-[22px] bg-gradient-to-r ${c.bar} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />

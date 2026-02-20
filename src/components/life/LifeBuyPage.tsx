@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { usePage } from '@/lib/PageContext'
+import { useRouter } from 'next/navigation'
 
 type Screen = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 
@@ -65,7 +65,7 @@ const INCOME_OPTIONS = [
 const STATES = ['Maharashtra', 'Delhi', 'Karnataka', 'Tamil Nadu', 'Gujarat', 'Rajasthan', 'Uttar Pradesh', 'West Bengal', 'Kerala', 'Punjab']
 
 export default function LifeBuyPage() {
-  const { showPage } = usePage()
+  const router = useRouter()
   const [screen, setScreen] = useState<Screen>(0)
   const [history, setHistory] = useState<Screen[]>([])
   const topRef = useRef<HTMLDivElement>(null)
@@ -137,7 +137,7 @@ export default function LifeBuyPage() {
       setScreen(last as Screen)
       setTimeout(() => topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50)
     } else {
-      showPage('life')
+      router.push('/life')
     }
   }
 
@@ -1014,7 +1014,7 @@ export default function LifeBuyPage() {
             <h4 className="font-heading text-sm font-bold text-navy mb-2">Term Life Insurance Policy</h4>
             <p className="text-xs text-slate-400 mb-4">Your policy document will be sent to your registered email and WhatsApp within 1–2 hours.</p>
             <button
-              onClick={() => showPage('life')}
+              onClick={() => router.push('/life')}
               className="w-full max-w-xs mx-auto block py-3 rounded-2xl font-heading font-bold text-sm border-none cursor-pointer bg-gradient-to-br from-life to-life-dark text-white hover:-translate-y-0.5 transition-transform"
             >
               📥 View Policy →
@@ -1022,7 +1022,7 @@ export default function LifeBuyPage() {
           </div>
 
           <div className="text-center">
-            <button onClick={() => showPage('home')} className="text-sm font-semibold text-life bg-transparent border-none cursor-pointer hover:underline">
+            <button onClick={() => router.push('/')} className="text-sm font-semibold text-life bg-transparent border-none cursor-pointer hover:underline">
               ← Back to Home
             </button>
           </div>
