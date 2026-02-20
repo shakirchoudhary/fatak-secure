@@ -8,10 +8,11 @@ export default function Footer() {
   return (
     <footer className="bg-[#44226e] text-white pt-12 pb-8">
       <div className="max-w-[1180px] mx-auto px-5 sm:px-7">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-10 pb-10 border-b border-white/[0.08]">
-          {/* Brand */}
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 pb-12 border-b border-white/[0.15]">
+          {/* Logo & Contact */}
           <div>
-            <div className="mb-4 cursor-pointer" onClick={() => router.push('/')}>
+            <div className="mb-6 cursor-pointer w-fit" onClick={() => router.push('/')}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/fatak-secure-logo.svg"
@@ -19,48 +20,32 @@ export default function Footer() {
                 style={{ width: 140, height: 'auto', objectFit: 'contain' }}
               />
             </div>
-            <p className="text-[13px] text-white/50 leading-relaxed mb-5">
-              FatakSecure is the dedicated insurance vertical of FatakPay — India's fastest-growing digital financial wellness platform. IRDAI Corporate Agent Licensed. Serving gig workers, blue-collar professionals and every Indian seeking simple, affordable protection.
-            </p>
-            <div className="flex gap-3">
-              {[
-                { label: 'in', href: 'https://in.linkedin.com/company/fatakpay' },
-                { label: 'ig', href: 'https://www.instagram.com/fatakpay/' },
-                { label: '𝕏', href: 'https://x.com/FatakPay/' },
-                { label: 'fb', href: 'https://www.facebook.com/share/1EpZrAwpJM/' },
-                { label: '▶', href: 'https://www.youtube.com/@fatakpay' },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-white/[0.06] border border-white/[0.09] flex items-center justify-center text-xs font-semibold transition-colors hover:bg-white/[0.12] text-white/60 hover:text-white"
-                >
-                  {s.label}
-                </a>
-              ))}
-            </div>
+            <button 
+              onClick={() => router.push('/contact')}
+              className="text-white text-sm font-medium flex items-center gap-2 hover:text-[#00C4B4] transition-colors w-fit"
+            >
+              <span>☎</span> Contact us
+            </button>
           </div>
 
-          {/* Products */}
+          {/* Insurance */}
           <div>
-            <h4 className="font-heading font-bold text-sm text-white mb-4 uppercase tracking-wider">Products</h4>
-            <ul className="space-y-2.5">
+            <h4 className="font-bold text-sm text-white mb-5 uppercase tracking-wide">Insurance</h4>
+            <ul className="space-y-3">
               {[
-                { label: 'Health Insurance', page: 'health' as const },
-                { label: 'Term Life Insurance', page: 'life' as const },
+                { label: 'Motor Insurance', page: 'motor' as const },
                 { label: 'Car Insurance', page: 'motor' as const },
                 { label: 'Bike Insurance', page: 'motor' as const },
+                { label: 'Health Insurance', page: 'health' as const },
+                { label: 'Term Life Insurance', page: 'life' as const },
                 { label: 'Travel Insurance', page: 'travel' as const },
-                { label: 'Insurance Glossary', page: 'glossary' as const },
                 { label: 'Personal Accident', page: 'health' as const },
                 { label: 'Cancer Insurance', page: 'health' as const },
               ].map((item) => (
                 <li key={item.label}>
                   <button
                     onClick={() => router.push('/' + item.page)}
-                    className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors bg-transparent border-none cursor-pointer font-body text-left"
+                    className="text-[13px] text-white/70 hover:text-[#00C4B4] transition-colors bg-transparent border-none cursor-pointer text-left font-normal"
                   >
                     {item.label}
                   </button>
@@ -69,25 +54,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Our Company */}
           <div>
-            <h4 className="font-heading font-bold text-sm text-white mb-4 uppercase tracking-wider">Company</h4>
-            <ul className="space-y-2.5">
+            <h4 className="font-bold text-sm text-white mb-5 uppercase tracking-wide">Our Company</h4>
+            <ul className="space-y-3">
               {[
-                { label: 'About FatakPay', href: 'https://fatakpay.com/about' },
-                { label: 'Claims Support', href: '#' },
-                { label: 'Insurance Glossary', href: '#' },
-                { label: 'Blog & Tips', href: 'https://fatakpay.com/blog' },
-                { label: 'FAQs', href: '#' },
-                { label: 'Contact Us', href: 'https://fatakpay.com/contact' },
-                { label: 'Careers', href: 'https://fatakpay.com/career' },
+                { label: 'About us', href: 'https://fatakpay.com/about' },
               ].map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    target={item.href !== '#' ? '_blank' : undefined}
-                    rel={item.href !== '#' ? 'noopener noreferrer' : undefined}
-                    className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[13px] text-white/70 hover:text-[#00C4B4] transition-colors font-normal"
                   >
                     {item.label}
                   </a>
@@ -98,50 +77,55 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-heading font-bold text-sm text-white mb-4 uppercase tracking-wider">Legal</h4>
-            <ul className="space-y-2.5">
+            <h4 className="font-bold text-sm text-white mb-5 uppercase tracking-wide">Legal</h4>
+            <ul className="space-y-3">
               {[
-                'Privacy Policy',
-                'Terms & Conditions',
-                'Grievance Redressal',
-                'IRDAI Disclosure',
-                'Fraud Safety',
+                { label: 'Terms & Conditions', href: '#' },
+                { label: 'Privacy Policy', href: '#' },
+                { label: 'Grievance Redressal', href: '#' },
               ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors">
-                    {item}
+                <li key={item.label}>
+                  <a 
+                    href={item.href}
+                    target={item.href !== '#' ? '_blank' : undefined}
+                    rel={item.href !== '#' ? 'noopener noreferrer' : undefined}
+                    className="text-[13px] text-white/70 hover:text-[#00C4B4] transition-colors font-normal"
+                  >
+                    {item.label}
                   </a>
                 </li>
               ))}
-              <li>
-                <a
-                  href="https://fatakpay.com/site-map"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[13px] text-white/50 hover:text-[#00C4B4] transition-colors"
-                >
-                  Sitemap
-                </a>
-              </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-          <p className="text-[12px] text-white/30">
-            © 2026 FatakPay Digital Pvt. Ltd. All rights reserved.
+        {/* Company Information */}
+        <div className="pb-8 border-b border-white/[0.15] mb-8">
+          <h5 className="font-bold text-white mb-3 text-sm">FatakPay Insurance Solutions Pvt Ltd</h5>
+          <p className="text-[12px] text-white/70 mb-2">
+            IRDAI Registered Corporate Agent (Composite) License No CA1073 valid till 24th September, 2028
           </p>
-          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-            <a href="https://fatakpay.com" target="_blank" rel="noopener noreferrer" className="text-[12px] text-white/40 hover:text-white/70 transition-colors">fatakpay.com</a>
-            <a href="mailto:support@fatakpay.com" className="text-[12px] text-white/40 hover:text-white/70 transition-colors">support@fatakpay.com</a>
-            <a href="tel:+918880080808" className="text-[12px] text-white/40 hover:text-white/70 transition-colors">+91 888 008 0808</a>
-          </div>
+          <p className="text-[12px] text-white/70 mb-2">
+            <span className="font-semibold">Registered Address: </span>
+            <span>— Office no. 23, 2nd Floor, Der Deutsche Parkz, Bhandup Village Road, Bhandup (West), Mumbai Suburban (Mumbai) Maharashtra, 400078.</span>
+          </p>
+          <p className="text-[12px] text-white/70 mb-3">
+            <span className="font-semibold">Principal Officer: </span>Bikash Choudhary
+          </p>
+          <p className="text-[12px] text-white/70 leading-relaxed">
+            Insurance is the subject matter of solicitation. Participation by customers is voluntary. Please read the sales brochure carefully before concluding a sale. Terms & Conditions Apply.
+          </p>
         </div>
 
-        <p className="text-[11px] text-white/25 leading-relaxed">
-          FatakSecure is the insurance vertical of FatakPay Digital Pvt. Ltd., operating under an IRDAI composite Corporate Agent License. Insurance is the subject matter of solicitation. FatakSecure acts as a Corporate Agent and does not underwrite insurance. All policies are issued by IRDAI-registered insurance companies. Premiums shown are indicative and subject to underwriting. Registered Office: FatakPay Digital Pvt. Ltd., India.
-        </p>
+        {/* Footer Bottom */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="text-[11px] text-white/40">
+            © 2026 FatakSecure. All rights reserved.
+          </p>
+          <p className="text-[11px] text-white/40">
+            FatakSecure is an applied trademark of FatakPay Insurance Services Pvt Ltd
+          </p>
+        </div>
       </div>
     </footer>
   )
