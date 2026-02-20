@@ -157,25 +157,24 @@ export default function MotorBuyPage() {
   return (
     <div className="pt-16 bg-slate-50 min-h-screen" ref={topRef}>
       {/* Header */}
-      <div className="bg-white border-b border-slate-100 px-[5%] py-3.5 flex items-center justify-between sticky top-16 z-10">
-        <div className="flex items-center gap-3">
+      <div className="bg-white border-b border-slate-100 px-4 sm:px-[5%] py-3 sm:py-3.5 flex items-center justify-between sticky top-16 z-10">
+        <div className="flex items-center gap-2.5">
           <button onClick={goBack} className="text-slate-400 hover:text-navy transition-colors bg-transparent border-none cursor-pointer font-body text-xl leading-none">←</button>
           <div>
             <div className="font-heading font-bold text-navy text-sm">Motor Insurance</div>
-            <div className="text-[11px] text-slate-400">{STEP_LABELS[currentStep]} · Step {currentStep + 1} of 8</div>
+            {regNo && screen >= 3 ? (
+              <div className="text-[11px] font-semibold text-motor-dark">🚗 {regNo}</div>
+            ) : (
+              <div className="text-[11px] text-slate-400">{STEP_LABELS[currentStep]} · Step {currentStep + 1} of 8</div>
+            )}
           </div>
         </div>
-        {regNo && screen >= 3 && (
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-navy bg-motor-bg border border-motor/20 px-3 py-1.5 rounded-xl">
-            <span>🚗</span> <span>{regNo}</span>
-          </div>
-        )}
-        <div className="flex gap-1.5">
+        <div className="flex gap-1">
           {STEP_LABELS.map((_, i) => (
-            <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${
-              i < currentStep ? 'w-4 bg-motor' :
-              i === currentStep ? 'w-7 bg-motor opacity-50' :
-              'w-4 bg-slate-200'
+            <div key={i} className={`h-1 sm:h-1.5 rounded-full transition-all duration-300 ${
+              i < currentStep ? 'w-3 sm:w-4 bg-motor' :
+              i === currentStep ? 'w-5 sm:w-7 bg-motor opacity-50' :
+              'w-3 sm:w-4 bg-slate-200'
             }`} />
           ))}
         </div>
@@ -312,7 +311,7 @@ export default function MotorBuyPage() {
           </div>
 
           {/* Filters */}
-          <div className="grid grid-cols-3 gap-2 mb-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-5">
             <div>
               <div className="text-[10.5px] font-bold text-slate-400 uppercase mb-1">Plan Type</div>
               <select
@@ -483,7 +482,7 @@ export default function MotorBuyPage() {
             </div>
 
             <div className="font-heading text-sm font-bold text-navy mb-3">Previous year No Claim Bonus %</div>
-            <div className="grid grid-cols-6 gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
               {[0, 20, 25, 35, 45, 50].map(pct => (
                 <button key={pct} onClick={() => setNcbPct(pct)}
                   className={`py-2.5 rounded-xl text-sm font-bold border-[1.5px] transition-all cursor-pointer ${

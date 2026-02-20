@@ -197,8 +197,8 @@ export default function HealthBuyPage() {
   return (
     <div className="pt-16 bg-slate-50 min-h-screen" ref={topRef}>
       {/* Header */}
-      <div className="bg-white border-b border-slate-100 px-[5%] py-3.5 flex items-center justify-between sticky top-16 z-10">
-        <div className="flex items-center gap-3">
+      <div className="bg-white border-b border-slate-100 px-4 sm:px-[5%] py-3 sm:py-3.5 flex items-center justify-between sticky top-16 z-10">
+        <div className="flex items-center gap-2.5">
           <button onClick={goBack} className="text-slate-400 hover:text-navy transition-colors bg-transparent border-none cursor-pointer font-body text-xl leading-none">←</button>
           <div>
             <div className="font-heading font-bold text-navy text-sm">Health Insurance</div>
@@ -206,14 +206,14 @@ export default function HealthBuyPage() {
           </div>
         </div>
         {/* Progress dots */}
-        <div className="flex gap-1.5">
+        <div className="flex gap-1">
           {STEP_LABELS.map((_, i) => (
             <div
               key={i}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i < currentStep ? 'w-5 bg-health opacity-50' :
-                i === currentStep ? 'w-8 bg-health' :
-                'w-5 bg-slate-200'
+              className={`h-1 sm:h-1.5 rounded-full transition-all duration-300 ${
+                i < currentStep ? 'w-3.5 sm:w-5 bg-health opacity-50' :
+                i === currentStep ? 'w-5 sm:w-8 bg-health' :
+                'w-3.5 sm:w-5 bg-slate-200'
               }`}
             />
           ))}

@@ -169,26 +169,24 @@ export default function LifeBuyPage() {
   return (
     <div className="pt-16 bg-slate-50 min-h-screen" ref={topRef}>
       {/* Header */}
-      <div className="bg-white border-b border-slate-100 px-[5%] py-3.5 flex items-center justify-between sticky top-16 z-10">
-        <div className="flex items-center gap-3">
+      <div className="bg-white border-b border-slate-100 px-4 sm:px-[5%] py-3 sm:py-3.5 flex items-center justify-between sticky top-16 z-10">
+        <div className="flex items-center gap-2.5">
           <button onClick={goBack} className="text-slate-400 hover:text-navy transition-colors bg-transparent border-none cursor-pointer font-body text-xl leading-none">←</button>
           <div>
             <div className="font-heading font-bold text-navy text-sm">Life Insurance</div>
-            <div className="text-[11px] text-slate-400">{STEP_LABELS[currentStep]} · Step {currentStep + 1} of 9</div>
+            {screen >= 3 ? (
+              <div className="text-[11px] font-semibold text-life-dark">{COVER_LABELS[cover]} · {term} yrs</div>
+            ) : (
+              <div className="text-[11px] text-slate-400">{STEP_LABELS[currentStep]} · Step {currentStep + 1} of 9</div>
+            )}
           </div>
         </div>
-        {screen >= 3 && (
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-navy bg-life-bg border border-life/20 px-3 py-1.5 rounded-xl">
-            <span>🛡️</span>
-            <span>{COVER_LABELS[cover]} · {term} yrs</span>
-          </div>
-        )}
-        <div className="flex gap-1.5">
+        <div className="flex gap-1">
           {STEP_LABELS.map((_, i) => (
-            <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${
-              i < currentStep ? 'w-4 bg-life opacity-50' :
-              i === currentStep ? 'w-7 bg-life' :
-              'w-4 bg-slate-200'
+            <div key={i} className={`h-1 sm:h-1.5 rounded-full transition-all duration-300 ${
+              i < currentStep ? 'w-3 sm:w-4 bg-life opacity-50' :
+              i === currentStep ? 'w-5 sm:w-7 bg-life' :
+              'w-3 sm:w-4 bg-slate-200'
             }`} />
           ))}
         </div>
