@@ -24,7 +24,7 @@ export default function Button({
 
   const variants = {
     primary:
-      'bg-gradient-to-br from-orange to-orange-dark text-white shadow-orange hover:shadow-orange-hover hover:-translate-y-0.5 border-none',
+      'bg-gradient-to-r from-[#ffc837] to-[#f6462d] text-white shadow-orange hover:shadow-orange-hover hover:-translate-y-0.5 border-none',
     ghost:
       'bg-white/10 border-[1.5px] border-white/[0.28] text-white hover:bg-white/[0.18] hover:border-white/50',
   }

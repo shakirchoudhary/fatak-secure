@@ -21,10 +21,10 @@ export default function HeroSection() {
   const { showPage } = usePage()
 
   return (
-    <section className="min-h-screen pt-[90px] pb-[72px] px-[5%] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2A0D52 0%,#3B1370 48%,#5C1E9E 100%)' }}>
+    <section className="min-h-screen pt-[90px] pb-[72px] px-[5%] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
       {/* Blobs */}
       <div className="absolute -top-44 -right-36 w-[680px] h-[680px] bg-[radial-gradient(circle,rgba(0,196,180,0.13),transparent_68%)] rounded-full pointer-events-none" />
-      <div className="absolute -bottom-40 -left-[120px] w-[520px] h-[520px] bg-[radial-gradient(circle,rgba(255,107,53,0.1),transparent_68%)] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-40 -left-[120px] w-[520px] h-[520px] bg-[radial-gradient(circle,rgba(246,70,45,0.1),transparent_68%)] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:54px_54px] pointer-events-none" />
 
       <div className="max-w-[1180px] mx-auto w-full grid grid-cols-2 gap-14 items-center relative z-10">

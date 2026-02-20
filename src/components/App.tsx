@@ -86,14 +86,14 @@ export default function App() {
             display: 'flex',
             alignItems: 'center',
             gap: 8,
-            background: 'linear-gradient(135deg,#FF6B35,#e5521c)',
+            background: 'linear-gradient(135deg,#ffc837,#f6462d)',
             color: '#fff',
             padding: '12px 22px',
             borderRadius: 50,
             fontFamily: 'var(--fh)',
             fontSize: 13.5,
             fontWeight: 700,
-            boxShadow: '0 8px 28px rgba(255,107,53,.46)',
+            boxShadow: '0 8px 28px rgba(246,70,45,.46)',
             transition: 'all .25s',
             cursor: 'pointer',
             border: 'none',
@@ -101,12 +101,12 @@ export default function App() {
           onMouseEnter={(e) => {
             const el = e.currentTarget
             el.style.transform = 'translateY(-3px) scale(1.04)'
-            el.style.boxShadow = '0 14px 38px rgba(255,107,53,.58)'
+            el.style.boxShadow = '0 14px 38px rgba(246,70,45,.58)'
           }}
           onMouseLeave={(e) => {
             const el = e.currentTarget
             el.style.transform = ''
-            el.style.boxShadow = '0 8px 28px rgba(255,107,53,.46)'
+            el.style.boxShadow = '0 8px 28px rgba(246,70,45,.46)'
           }}
         >
           🛡️ Free Quote

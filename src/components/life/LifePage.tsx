@@ -80,7 +80,7 @@ export default function LifePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2A0D52 0%,#3B1370 48%,#5C1E9E 100%)' }}>
+      <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
         <div className="absolute -top-36 -right-[120px] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(236,72,153,0.15),transparent_68%)] rounded-full pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:52px_52px] pointer-events-none" />
 
@@ -112,7 +112,7 @@ export default function LifePage() {
             <div className="flex gap-3.5">
               <button
                 onClick={() => showPage('life-buy')}
-                className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#FF6B35] to-[#e5521c] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(255,107,53,0.5)] transition-all border-none cursor-pointer"
+                className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
               >
                 Calculate My Premium →
               </button>
@@ -241,7 +241,7 @@ export default function LifePage() {
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={() => showPage('life-buy')}
-              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#FF6B35] to-[#e5521c] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(255,107,53,0.5)] transition-all border-none cursor-pointer"
+              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
             >
               🛡️ Get Life Cover →
             </button>

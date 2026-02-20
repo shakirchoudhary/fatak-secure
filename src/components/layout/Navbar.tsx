@@ -14,7 +14,7 @@ export default function Navbar() {
   const { showPage, gotoSection } = usePage()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[300] h-16 flex items-center justify-between px-[5%] bg-[#3B1370] border-b border-white/[0.07]">
+    <nav className="fixed top-0 left-0 right-0 z-[300] h-16 flex items-center justify-between px-[5%] bg-[#44226e] border-b border-white/[0.07]">
       {/* Brand */}
       <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => showPage('home')}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -115,7 +115,7 @@ export default function Navbar() {
           ↗ fatakpay.com
         </a>
         <button
-          className="inline-flex items-center gap-2 font-heading font-bold border-none cursor-pointer rounded-full transition-all whitespace-nowrap text-white bg-gradient-to-br from-[#FF6B35] to-[#e5521c] py-[9px] px-5 text-[13px] shadow-[0_6px_22px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(255,107,53,0.5)]"
+          className="inline-flex items-center gap-2 font-heading font-bold border-none cursor-pointer rounded-full transition-all whitespace-nowrap text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-[9px] px-5 text-[13px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)]"
           onClick={() => showPage('health-buy')}
         >
           Get Insured

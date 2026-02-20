@@ -30,7 +30,7 @@ export default function GlossaryPage() {
   return (
     <div className="pt-16 bg-white min-h-screen">
       {/* Header */}
-      <div className="bg-gradient-to-br from-[#2A0D52] via-[#3B1370] to-[#5C1E9E] py-20 px-[5%] text-center">
+      <div className="bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] py-20 px-[5%] text-center">
         <div className="flex items-center justify-center gap-2 text-xs text-white/[0.45] mb-4">
           <button onClick={() => showPage('home')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
           <span className="text-white/25">›</span>

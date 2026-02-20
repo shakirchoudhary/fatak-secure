@@ -42,13 +42,13 @@ export default function CalculatorsPage() {
     { id: 'health', label: 'Health Insurance', emoji: '❤️‍🩹' },
   ]
 
-  const inputCls = 'w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-[14.5px] text-navy outline-none focus:border-orange focus:shadow-[0_0_0_3px_rgba(255,107,53,0.12)] transition-all bg-white'
+  const inputCls = 'w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-xl font-body text-[14.5px] text-navy outline-none focus:border-orange focus:shadow-[0_0_0_3px_rgba(246,70,45,0.12)] transition-all bg-white'
   const labelCls = 'block text-[11.5px] font-bold text-slate-600 uppercase tracking-[0.8px] mb-2'
 
   return (
     <div className="pt-16 bg-slate-50 min-h-screen">
       {/* Header */}
-      <div className="bg-gradient-to-br from-[#2A0D52] via-[#3B1370] to-[#5C1E9E] py-20 px-[5%] text-center">
+      <div className="bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] py-20 px-[5%] text-center">
         <div className="flex items-center justify-center gap-2 text-xs text-white/[0.45] mb-4">
           <button onClick={() => showPage('home')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
           <span className="text-white/25">›</span>

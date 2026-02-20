@@ -15,7 +15,7 @@ const STEPS = [
   },
   {
     n: 3,
-    color: '#FF6B35',
+    color: '#ffc837',
     title: 'Fill Your Details',
     desc: 'KYC auto-fills from FatakPay. Just verify — no re-entry needed.',
   },

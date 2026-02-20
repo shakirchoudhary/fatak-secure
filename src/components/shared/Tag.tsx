@@ -14,7 +14,7 @@ const colorMap = {
   travel: 'text-travel',
 }
 
-export default function Tag({ children, color = 'orange', centered = false, noBar = false }: TagProps) {
+export default function Tag({ children, color = 'teal', centered = false, noBar = false }: TagProps) {
   return (
     <div
       className={`inline-flex items-center gap-1.5 text-[11px] font-bold tracking-[2px] uppercase mb-2.5 ${colorMap[color]} ${centered ? 'justify-center' : ''}`}

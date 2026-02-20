@@ -6,7 +6,7 @@ export default function Footer() {
   const { showPage } = usePage()
 
   return (
-    <footer className="bg-[#3B1370] text-white pt-16 pb-8">
+    <footer className="bg-[#44226e] text-white pt-16 pb-8">
       <div className="max-w-[1180px] mx-auto px-7">
         <div className="grid grid-cols-4 gap-10 mb-12 pb-12 border-b border-white/[0.08]">
           {/* Brand */}

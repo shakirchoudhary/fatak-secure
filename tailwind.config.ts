@@ -15,8 +15,9 @@ const config: Config = {
           mid: '#12255e',
         },
         orange: {
-          DEFAULT: '#FF6B35',
-          dark: '#e5521c',
+          DEFAULT: '#f6462d',
+          dark: '#c93320',
+          gold: '#ffc837',
         },
         teal: {
           DEFAULT: '#00C4B4',
@@ -25,9 +26,9 @@ const config: Config = {
         gold: '#F5B36D',
         cream: '#FFF9F5',
         brand: {
-          purple: '#3B1370',
-          'purple-deep': '#2A0D52',
-          'purple-light': '#5C1E9E',
+          purple: '#44226e',
+          'purple-deep': '#2d1057',
+          'purple-light': '#6b3fa0',
         },
         health: {
           DEFAULT: '#0EA5E9',
@@ -66,8 +67,8 @@ const config: Config = {
         's1': '0 2px 12px rgba(13,27,75,.07)',
         's2': '0 8px 32px rgba(13,27,75,.11)',
         's3': '0 24px 64px rgba(13,27,75,.15)',
-        'orange': '0 6px 22px rgba(255,107,53,.35)',
-        'orange-hover': '0 14px 34px rgba(255,107,53,.5)',
+        'orange': '0 6px 22px rgba(246,70,45,.35)',
+        'orange-hover': '0 14px 34px rgba(246,70,45,.5)',
         'health': '0 6px 20px rgba(14,165,233,.3)',
       },
       animation: {

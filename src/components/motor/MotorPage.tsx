@@ -112,7 +112,7 @@ export default function MotorPage() {
             <div className="flex gap-3.5">
               <button
                 onClick={() => showPage('motor-buy')}
-                className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#FF6B35] to-[#e5521c] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(255,107,53,0.5)] transition-all border-none cursor-pointer"
+                className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
               >
                 Renew Motor Insurance →
               </button>
@@ -241,7 +241,7 @@ export default function MotorPage() {
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={() => showPage('motor-buy')}
-              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#FF6B35] to-[#e5521c] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(255,107,53,0.5)] transition-all border-none cursor-pointer"
+              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
             >
               🚗 Renew Motor Insurance →
             </button>

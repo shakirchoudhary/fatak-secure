@@ -122,7 +122,7 @@ export default function TravelPage() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => showPage('home')}
-                className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#FF6B35] to-[#e5521c] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(255,107,53,0.5)] transition-all border-none cursor-pointer"
+                className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
               >
                 Get Travel Quote →
               </button>
@@ -148,7 +148,7 @@ export default function TravelPage() {
             </div>
             <button
               onClick={() => showPage('home')}
-              className="w-full flex items-center justify-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#FF6B35] to-[#e5521c] py-3 px-5 text-[14px] shadow-[0_6px_22px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 transition-all border-none cursor-pointer mb-3"
+              className="w-full flex items-center justify-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3 px-5 text-[14px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 transition-all border-none cursor-pointer mb-3"
             >
               Get Travel Insurance →
             </button>
@@ -264,7 +264,7 @@ export default function TravelPage() {
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={() => showPage('home')}
-              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#FF6B35] to-[#e5521c] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(255,107,53,0.5)] transition-all border-none cursor-pointer"
+              className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
             >
               ✈️ Get Travel Insurance →
             </button>

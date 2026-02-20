@@ -4,7 +4,7 @@ import Button from '@/components/shared/Button'
 
 export default function CTASection() {
   return (
-    <section className="py-24 px-[5%] text-center bg-gradient-to-br from-[#2A0D52] to-[#3B1370] relative overflow-hidden">
+    <section className="py-24 px-[5%] text-center bg-gradient-to-br from-[#2d1057] to-[#44226e] relative overflow-hidden">
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[680px] h-[680px] bg-[radial-gradient(circle,rgba(0,196,180,0.1),transparent_65%)] pointer-events-none" />
 
       <div className="max-w-[1180px] mx-auto relative z-10">
