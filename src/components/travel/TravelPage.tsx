@@ -109,7 +109,7 @@ export default function TravelPage() {
             <h1 className="font-heading text-[clamp(30px,4vw,52px)] font-extrabold leading-[1.08] tracking-[-1px] text-white mb-4">
               Travel Insurance<br /><span style={{ color: '#34D399' }}>for Every Journey</span>
             </h1>
-            <p className="text-[16px] text-white/65 leading-[1.75] max-w-[480px] mb-6">
+            <p className="text-[16px] text-white/[0.65] leading-[1.75] max-w-[480px] mb-6">
               From a weekend trip to a world tour — get insured in 60 seconds. Medical emergencies, trip cancellation, lost baggage &amp; more, all covered.
             </p>
             <div className="flex flex-wrap gap-2.5 mb-7">
@@ -142,7 +142,7 @@ export default function TravelPage() {
               ].map((s) => (
                 <div key={s.lbl} className="text-center">
                   <div className="font-heading font-extrabold text-[22px] leading-none mb-1" style={{ color: '#34D399' }}>{s.num}</div>
-                  <div className="text-[11px] text-white/45">{s.lbl}</div>
+                  <div className="text-[11px] text-white/[0.45]">{s.lbl}</div>
                 </div>
               ))}
             </div>
@@ -152,7 +152,7 @@ export default function TravelPage() {
             >
               Get Travel Insurance →
             </button>
-            <p className="text-center text-[11.5px] text-white/35">🔒 Instant policy · Valid globally</p>
+            <p className="text-center text-[11.5px] text-white/[0.35]">🔒 Instant policy · Valid globally</p>
           </div>
         </div>
       </section>
@@ -260,7 +260,7 @@ export default function TravelPage() {
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-white mb-4">
             Travel Without Worry.<br /><span style={{ color: '#34D399' }}>From ₹199/Trip</span>
           </h2>
-          <p className="text-[16px] text-white/65 mb-8">Instant policy. 150+ countries. 24/7 emergency support. Schengen compliant.</p>
+          <p className="text-[16px] text-white/[0.65] mb-8">Instant policy. 150+ countries. 24/7 emergency support. Schengen compliant.</p>
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={() => showPage('home')}

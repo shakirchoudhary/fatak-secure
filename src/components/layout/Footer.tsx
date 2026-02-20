@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="mb-4 cursor-pointer" onClick={() => showPage('home')}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/fataksecure-logo.jpg"
+                src="/fatak-secure-logo.svg"
                 alt="FatakSecure"
                 style={{ width: 140, height: 'auto', objectFit: 'contain' }}
               />

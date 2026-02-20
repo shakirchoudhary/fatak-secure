@@ -32,7 +32,7 @@ export default function WhySection() {
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-white mb-3">
             Built for <span className="text-orange">Bharat's</span><br />Hardest Workers
           </h2>
-          <p className="text-base text-white/55 leading-[1.78] max-w-[520px]">
+          <p className="text-base text-white/[0.55] leading-[1.78] max-w-[520px]">
             Insurance in India is broken — complex, expensive, full of fine print. We're fixing that.
           </p>
 
@@ -66,7 +66,7 @@ export default function WhySection() {
             >
               <div className="text-2xl mb-2.5">{card.ico}</div>
               <h4 className="font-heading text-sm font-bold text-white mb-1">{card.title}</h4>
-              <p className="text-xs text-white/48 leading-[1.6]">{card.desc}</p>
+              <p className="text-xs text-white/[0.48] leading-[1.6]">{card.desc}</p>
             </div>
           ))}
         </div>

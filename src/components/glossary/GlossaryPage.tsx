@@ -31,15 +31,15 @@ export default function GlossaryPage() {
     <div className="pt-16 bg-white min-h-screen">
       {/* Header */}
       <div className="bg-gradient-to-br from-[#2A0D52] via-[#3B1370] to-[#5C1E9E] py-20 px-[5%] text-center">
-        <div className="flex items-center justify-center gap-2 text-xs text-white/45 mb-4">
-          <button onClick={() => showPage('home')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/45">Home</button>
+        <div className="flex items-center justify-center gap-2 text-xs text-white/[0.45] mb-4">
+          <button onClick={() => showPage('home')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
           <span className="text-white/25">›</span>
           <span className="text-white/70">Insurance Glossary</span>
         </div>
         <h1 className="font-heading text-[clamp(28px,4vw,48px)] font-extrabold text-white leading-tight tracking-tight mb-3">
           Insurance Glossary<br /><span className="text-teal-light">Know Every Term</span>
         </h1>
-        <p className="text-white/65 text-base max-w-[480px] mx-auto mb-8">
+        <p className="text-white/[0.65] text-base max-w-[480px] mx-auto mb-8">
           Plain-language explanations of 50+ insurance terms. No jargon, no confusion.
         </p>
         {/* Search */}

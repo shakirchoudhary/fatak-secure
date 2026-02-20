@@ -115,8 +115,8 @@ export default function HealthPage() {
 
         <div className="max-w-[1180px] mx-auto grid grid-cols-2 gap-14 items-center relative z-10 w-full">
           <div>
-            <div className="flex items-center gap-2 text-xs text-white/45 mb-4">
-              <button onClick={() => showPage('home')} className="hover:text-white/80 transition-colors bg-transparent border-none cursor-pointer font-body text-white/45">Home</button>
+            <div className="flex items-center gap-2 text-xs text-white/[0.45] mb-4">
+              <button onClick={() => showPage('home')} className="hover:text-white/80 transition-colors bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
               <span className="text-white/25">›</span>
               <span className="text-white/70">Health Insurance</span>
             </div>
@@ -128,7 +128,7 @@ export default function HealthPage() {
               Health Insurance<br />
               <span className="text-[#38BDF8]">for Every Indian Family</span>
             </h1>
-            <p className="text-[17px] text-white/68 leading-[1.78] max-w-[460px] mb-8">
+            <p className="text-[17px] text-white/[0.68] leading-[1.78] max-w-[460px] mb-8">
               Affordable, comprehensive health insurance from ₹299/month. Cashless treatment at 10,000+ hospitals. No hidden surprises at claim time.
             </p>
             <div className="flex flex-wrap gap-2.5 mb-8">
@@ -328,7 +328,7 @@ export default function HealthPage() {
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-white mb-4">
             Protect Your Family's Health<br /><span style={{ color: '#38BDF8' }}>From ₹299/Month</span>
           </h2>
-          <p className="text-[16px] text-white/65 mb-8">Cashless treatment at 10,000+ hospitals. Instant policy. No paperwork.</p>
+          <p className="text-[16px] text-white/[0.65] mb-8">Cashless treatment at 10,000+ hospitals. Instant policy. No paperwork.</p>
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={() => showPage('health-buy')}

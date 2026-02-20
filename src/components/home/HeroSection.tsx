@@ -60,7 +60,7 @@ export default function HeroSection() {
             &amp; Instant.
           </h1>
 
-          <p className="text-[17px] text-white/67 leading-[1.78] max-w-[455px] mb-8">
+          <p className="text-[17px] text-white/[0.67] leading-[1.78] max-w-[455px] mb-8">
             From health to your bike — secure everything that matters. No paperwork. No agents. Policy in 2 minutes.
           </p>
 
@@ -75,7 +75,7 @@ export default function HeroSection() {
 
           <div className="flex items-center gap-5 mt-8 pt-6 border-t border-white/10 flex-wrap">
             {TRUST_PILLS.map((p) => (
-              <div key={p.label} className="flex items-center gap-1.5 text-xs text-white/62">
+              <div key={p.label} className="flex items-center gap-1.5 text-xs text-white/[0.62]">
                 <span className="w-[25px] h-[25px] bg-white/[0.08] rounded-full flex items-center justify-center text-[11px] flex-shrink-0">
                   {p.ico}
                 </span>

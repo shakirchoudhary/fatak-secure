@@ -86,8 +86,8 @@ export default function MotorPage() {
 
         <div className="max-w-[1180px] mx-auto grid grid-cols-2 gap-14 items-center relative z-10 w-full">
           <div>
-            <div className="flex items-center gap-2 text-xs text-white/45 mb-4">
-              <button onClick={() => showPage('home')} className="hover:text-white/80 transition-colors bg-transparent border-none cursor-pointer font-body text-white/45">Home</button>
+            <div className="flex items-center gap-2 text-xs text-white/[0.45] mb-4">
+              <button onClick={() => showPage('home')} className="hover:text-white/80 transition-colors bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
               <span className="text-white/25">›</span>
               <span className="text-white/70">Motor Insurance</span>
             </div>
@@ -99,7 +99,7 @@ export default function MotorPage() {
               Motor Insurance<br />
               <span className="text-[#FCD34D]">Renewed in 2 Minutes</span>
             </h1>
-            <p className="text-[17px] text-white/68 leading-[1.78] max-w-[460px] mb-8">
+            <p className="text-[17px] text-white/[0.68] leading-[1.78] max-w-[460px] mb-8">
               Comprehensive car and bike insurance at the best price. Instant online renewal, zero depreciation add-on, 24/7 roadside assistance. IRDAI-approved.
             </p>
             <div className="flex flex-wrap gap-2.5 mb-8">
@@ -237,7 +237,7 @@ export default function MotorPage() {
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-white mb-4">
             Renew Your Motor Insurance<br /><span style={{ color: '#FCD34D' }}>in 2 Minutes Flat</span>
           </h2>
-          <p className="text-[16px] text-white/65 mb-8">Instant quote. Best price. Cashless garages across India.</p>
+          <p className="text-[16px] text-white/[0.65] mb-8">Instant quote. Best price. Cashless garages across India.</p>
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={() => showPage('motor-buy')}

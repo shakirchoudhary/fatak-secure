@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => showPage('home')}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/fataksecure-logo.jpg"
+          src="/fatak-secure-logo.svg"
           alt="FatakSecure"
           style={{ width: 140, height: 'auto', objectFit: 'contain' }}
           className="h-[52px] max-w-[220px] flex-shrink-0"
@@ -55,7 +55,7 @@ export default function Navbar() {
               >
                 <span className="text-lg w-7 text-center flex-shrink-0">{p.emoji}</span>
                 <div>
-                  <div className="font-semibold text-[13px] text-white/85 leading-none mb-0.5">{p.label}</div>
+                  <div className="font-semibold text-[13px] text-white/[0.85] leading-none mb-0.5">{p.label}</div>
                   <div className="text-[11px] text-white/40">{p.sub}</div>
                 </div>
               </div>
