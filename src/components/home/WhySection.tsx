@@ -24,7 +24,7 @@ export default function WhySection() {
 
   return (
     <section className="py-[88px] px-[5%] text-white overflow-hidden relative" style={{ background: 'linear-gradient(145deg,#0c2d4a,#0d3d5c)' }} id="why-home">
-      <div className="absolute -top-30 -right-25 w-[480px] h-[480px] bg-[radial-gradient(circle,rgba(0,196,180,0.1),transparent_65%)] pointer-events-none" />
+      <div className="absolute -top-[120px] -right-[100px] w-[480px] h-[480px] bg-[radial-gradient(circle,rgba(0,196,180,0.1),transparent_65%)] pointer-events-none" />
       <div className="max-w-[1180px] mx-auto grid grid-cols-[1fr_1.35fr] gap-[68px] items-center relative z-10">
         {/* Left */}
         <div>

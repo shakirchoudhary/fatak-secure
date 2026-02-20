@@ -81,7 +81,7 @@ export default function MotorPage() {
     <div>
       {/* Hero */}
       <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1a00,#4a2d00,#6b3d00)' }}>
-        <div className="absolute -top-36 -right-30 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(245,158,11,0.15),transparent_68%)] rounded-full pointer-events-none" />
+        <div className="absolute -top-36 -right-[120px] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(245,158,11,0.15),transparent_68%)] rounded-full pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:52px_52px] pointer-events-none" />
 
         <div className="max-w-[1180px] mx-auto grid grid-cols-2 gap-14 items-center relative z-10 w-full">

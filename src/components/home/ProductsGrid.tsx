@@ -53,7 +53,7 @@ export default function ProductsGrid() {
   return (
     <section className="py-[88px] px-[5%] bg-slate-50" id="home-prods">
       <div className="max-w-[1180px] mx-auto">
-        <div className="text-center mb-13">
+        <div className="text-center mb-[52px]">
           <Tag centered noBar>Our Products</Tag>
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-3">
             Insurance for Every Need
