@@ -6,9 +6,9 @@ export default function Footer() {
   const router = useRouter()
 
   return (
-    <footer className="bg-[#44226e] text-white pt-16 pb-8">
-      <div className="max-w-[1180px] mx-auto px-7">
-        <div className="grid grid-cols-4 gap-10 mb-12 pb-12 border-b border-white/[0.08]">
+    <footer className="bg-[#44226e] text-white pt-12 pb-8">
+      <div className="max-w-[1180px] mx-auto px-5 sm:px-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-10 pb-10 border-b border-white/[0.08]">
           {/* Brand */}
           <div>
             <div className="mb-4 cursor-pointer" onClick={() => router.push('/')}>
@@ -128,11 +128,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex items-center justify-between flex-wrap gap-4 mb-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
           <p className="text-[12px] text-white/30">
             © 2026 FatakPay Digital Pvt. Ltd. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <a href="https://fatakpay.com" target="_blank" rel="noopener noreferrer" className="text-[12px] text-white/40 hover:text-white/70 transition-colors">fatakpay.com</a>
             <a href="mailto:support@fatakpay.com" className="text-[12px] text-white/40 hover:text-white/70 transition-colors">support@fatakpay.com</a>
             <a href="tel:+918880080808" className="text-[12px] text-white/40 hover:text-white/70 transition-colors">+91 888 008 0808</a>

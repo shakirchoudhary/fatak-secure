@@ -30,7 +30,7 @@ export default function GlossaryPage() {
   return (
     <div className="pt-16 bg-white min-h-screen">
       {/* Header */}
-      <div className="bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] py-20 px-[5%] text-center">
+      <div className="bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] py-12 md:py-20 px-[5%] text-center">
         <div className="flex items-center justify-center gap-2 text-xs text-white/[0.45] mb-4">
           <button onClick={() => router.push('/')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
           <span className="text-white/25">›</span>
@@ -55,7 +55,7 @@ export default function GlossaryPage() {
         </div>
       </div>
 
-      <div className="max-w-[1180px] mx-auto px-7 py-12">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-7 py-10 md:py-12">
         {/* Alpha Nav */}
         {!search && (
           <div className="flex flex-wrap gap-1.5 mb-10">
@@ -75,7 +75,7 @@ export default function GlossaryPage() {
         {filteredSections.map((section) => (
           <div key={section.letter} id={`gl-${section.letter}`} className="mb-10">
             <div className="font-heading text-5xl font-extrabold text-slate-200 mb-4">{section.letter}</div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {section.terms.map((term) => (
                 <div key={term.term} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-s1 hover:shadow-s2 transition-shadow">
                   <h3 className="font-heading text-[15px] font-bold text-navy mb-2">{term.term}</h3>

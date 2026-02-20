@@ -3,7 +3,7 @@ import { TESTIMONIALS } from '@/lib/data'
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-[88px] px-[5%] bg-[#FFF9F5]">
+    <section className="py-14 md:py-[88px] px-[5%] bg-[#FFF9F5]">
       <div className="max-w-[1180px] mx-auto">
         <div className="text-center mb-12">
           <Tag centered noBar>Real Stories</Tag>
@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}

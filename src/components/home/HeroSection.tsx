@@ -21,15 +21,15 @@ export default function HeroSection() {
   const router = useRouter()
 
   return (
-    <section className="min-h-screen pt-[90px] pb-[72px] px-[5%] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
+    <section className="min-h-screen pt-[80px] pb-12 md:pb-[72px] px-[5%] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
       {/* Blobs */}
       <div className="absolute -top-44 -right-36 w-[680px] h-[680px] bg-[radial-gradient(circle,rgba(0,196,180,0.13),transparent_68%)] rounded-full pointer-events-none" />
       <div className="absolute -bottom-40 -left-[120px] w-[520px] h-[520px] bg-[radial-gradient(circle,rgba(246,70,45,0.1),transparent_68%)] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:54px_54px] pointer-events-none" />
 
-      <div className="max-w-[1180px] mx-auto w-full grid grid-cols-2 gap-14 items-center relative z-10">
+      <div className="max-w-[1180px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center relative z-10">
         {/* Cards side */}
-        <div className="grid grid-cols-2 gap-3.5">
+        <div className="grid grid-cols-2 gap-3 order-2 md:order-1">
           {HERO_CARDS.map((card) => (
             <div
               key={card.title}
@@ -47,7 +47,7 @@ export default function HeroSection() {
         </div>
 
         {/* Text side */}
-        <div>
+        <div className="order-1 md:order-2">
           <div className="inline-flex items-center gap-2 bg-teal/[0.12] border border-teal/[0.28] text-teal-light text-xs font-semibold px-4 py-1.5 rounded-2xl mb-5">
             <span className="w-[7px] h-[7px] bg-teal rounded-full animate-blink" />
             Now Live — India's Fastest Insurance Platform

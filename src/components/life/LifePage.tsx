@@ -80,11 +80,11 @@ export default function LifePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
+      <section className="pt-[80px] pb-12 px-[5%] md:min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
         <div className="absolute -top-36 -right-[120px] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(236,72,153,0.15),transparent_68%)] rounded-full pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:52px_52px] pointer-events-none" />
 
-        <div className="max-w-[1180px] mx-auto grid grid-cols-2 gap-14 items-center relative z-10 w-full">
+        <div className="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center relative z-10 w-full">
           <div>
             <div className="flex items-center gap-2 text-xs text-white/[0.45] mb-4">
               <button onClick={() => router.push('/')} className="hover:text-white/80 transition-colors bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
@@ -109,7 +109,7 @@ export default function LifePage() {
                 </div>
               ))}
             </div>
-            <div className="flex gap-3.5">
+            <div className="flex flex-col sm:flex-row gap-3.5">
               <button
                 onClick={() => router.push('/life/buy')}
                 className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-7 text-[14.5px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"
@@ -152,14 +152,14 @@ export default function LifePage() {
       </section>
 
       {/* Plans */}
-      <section className="py-[88px] px-[5%] bg-white">
+      <section className="py-14 md:py-[88px] px-[5%] bg-white">
         <div className="max-w-[1180px] mx-auto">
           <div className="text-center mb-12">
             <Tag color="life">Term Life Plans</Tag>
             <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold text-navy mb-3">Choose Your Life Cover</h2>
             <p className="text-slate-500 max-w-[520px] mx-auto">Pure term plans — affordable, high cover, no investment component.</p>
           </div>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {LIFE_PLANS.map((plan) => (
               <div
                 key={plan.name}
@@ -204,13 +204,13 @@ export default function LifePage() {
       </section>
 
       {/* Why */}
-      <section className="py-[88px] px-[5%]" style={{ background: 'var(--g50)' }}>
+      <section className="py-14 md:py-[88px] px-[5%]" style={{ background: 'var(--g50)' }}>
         <div className="max-w-[1180px] mx-auto">
           <div className="mb-10">
             <Tag color="teal">Why Choose Us</Tag>
             <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">Why Millions Choose FatakSecure for Life Cover</h2>
           </div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {WHY.map((w) => (
               <div key={w.title} className="p-5 rounded-2xl border border-slate-100 bg-white hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)] transition-all">
                 <div className="text-3xl mb-3">{w.ico}</div>
@@ -223,7 +223,7 @@ export default function LifePage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-[88px] px-[5%] bg-white">
+      <section className="py-14 md:py-[88px] px-[5%] bg-white">
         <div className="max-w-[700px] mx-auto">
           <Tag color="life">FAQ</Tag>
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-8">Life Insurance FAQs</h2>
@@ -232,13 +232,13 @@ export default function LifePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-[80px] px-[5%] text-white text-center" style={{ background: 'linear-gradient(145deg,#2d0a2e,#4a0d3d)' }}>
+      <section className="py-12 md:py-[80px] px-[5%] text-white text-center" style={{ background: 'linear-gradient(145deg,#2d0a2e,#4a0d3d)' }}>
         <div className="max-w-[600px] mx-auto">
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-white mb-4">
             Secure Your Family's Future<br /><span style={{ color: '#F472B6' }}>From ₹499/Year</span>
           </h2>
           <p className="text-[16px] text-white/[0.65] mb-8">₹1 Crore life cover. Instant policy. 99% claim settlement.</p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => router.push('/life/buy')}
               className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"

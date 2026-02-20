@@ -23,9 +23,9 @@ export default function WhySection() {
   const router = useRouter()
 
   return (
-    <section className="py-[88px] px-[5%] text-white overflow-hidden relative" style={{ background: 'linear-gradient(145deg,#2d1057,#44226e)' }} id="why-home">
+    <section className="py-14 md:py-[88px] px-[5%] text-white overflow-hidden relative" style={{ background: 'linear-gradient(145deg,#2d1057,#44226e)' }} id="why-home">
       <div className="absolute -top-[120px] -right-[100px] w-[480px] h-[480px] bg-[radial-gradient(circle,rgba(0,196,180,0.1),transparent_65%)] pointer-events-none" />
-      <div className="max-w-[1180px] mx-auto grid grid-cols-[1fr_1.35fr] gap-[68px] items-center relative z-10">
+      <div className="max-w-[1180px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.35fr] gap-10 lg:gap-[68px] items-center relative z-10">
         {/* Left */}
         <div>
           <Tag color="teal">Why FatakSecure</Tag>

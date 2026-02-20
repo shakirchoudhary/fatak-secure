@@ -109,11 +109,11 @@ export default function HealthPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="pt-[100px] pb-16 px-[5%] min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
+      <section className="pt-[80px] pb-12 px-[5%] md:min-h-[90vh] flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(155deg,#2d1057 0%,#44226e 48%,#6b3fa0 100%)' }}>
         <div className="absolute -top-36 -right-[120px] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(14,165,233,0.15),transparent_68%)] rounded-full pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:52px_52px] pointer-events-none" />
 
-        <div className="max-w-[1180px] mx-auto grid grid-cols-2 gap-14 items-center relative z-10 w-full">
+        <div className="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center relative z-10 w-full">
           <div>
             <div className="flex items-center gap-2 text-xs text-white/[0.45] mb-4">
               <button onClick={() => router.push('/')} className="hover:text-white/80 transition-colors bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
@@ -144,7 +144,7 @@ export default function HealthPage() {
                 </div>
               ))}
             </div>
-            <div className="flex gap-3.5">
+            <div className="flex flex-col sm:flex-row gap-3.5">
               <Button size="lg" onClick={() => router.push('/health/buy')}>Get Health Quote →</Button>
               <Button variant="ghost" onClick={() => router.push('/health/buy')}>Compare Plans</Button>
             </div>
@@ -177,7 +177,7 @@ export default function HealthPage() {
       </section>
 
       {/* Plans */}
-      <section className="py-[88px] px-[5%] bg-white">
+      <section className="py-14 md:py-[88px] px-[5%] bg-white">
         <div className="max-w-[1180px] mx-auto">
           <div className="text-center mb-12">
             <Tag color="health">Health Plans</Tag>
@@ -188,7 +188,7 @@ export default function HealthPage() {
               Plans for individuals, couples & families. All with cashless hospitalisation.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {HEALTH_PLANS.map((plan) => (
               <div
                 key={plan.name}
@@ -236,14 +236,14 @@ export default function HealthPage() {
       </section>
 
       {/* Coverage */}
-      <section className="py-[88px] px-[5%]" style={{ background: 'var(--g50)' }}>
+      <section className="py-14 md:py-[88px] px-[5%]" style={{ background: 'var(--g50)' }}>
         <div className="max-w-[1180px] mx-auto">
           <div className="mb-11">
             <Tag color="health">Coverage Details</Tag>
             <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">What Does Health Insurance Cover?</h2>
             <p className="text-[16px] text-slate-500 leading-[1.78] mt-2 max-w-[520px]">Everything you need to know about your health cover.</p>
           </div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {COVERAGE.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-[0_8px_28px_rgba(0,0,0,0.07)] transition-all">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style={{ background: 'var(--health-bg)' }}>{c.ico}</div>
@@ -257,13 +257,13 @@ export default function HealthPage() {
       </section>
 
       {/* Covered vs Not Covered */}
-      <section className="py-[88px] px-[5%] bg-white">
+      <section className="py-14 md:py-[88px] px-[5%] bg-white">
         <div className="max-w-[1180px] mx-auto">
           <div className="text-center mb-11">
             <Tag color="health">Policy Details</Tag>
             <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">Covered vs. Not Covered</h2>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-2xl p-7 border border-slate-200">
               <h3 className="font-heading font-bold text-[18px] text-navy mb-5">
                 <span style={{ color: '#10B981' }}>✅</span> What's Covered
@@ -295,13 +295,13 @@ export default function HealthPage() {
       </section>
 
       {/* Why */}
-      <section className="py-[88px] px-[5%]" style={{ background: 'var(--g50)' }}>
+      <section className="py-14 md:py-[88px] px-[5%]" style={{ background: 'var(--g50)' }}>
         <div className="max-w-[1180px] mx-auto">
           <div className="mb-10">
             <Tag color="teal">Why Choose Us</Tag>
             <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy">India's Smartest Way to Buy Health Insurance</h2>
           </div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {WHY.map((w) => (
               <div key={w.title} className="p-5 rounded-2xl border border-slate-100 bg-white hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)] transition-all">
                 <div className="text-3xl mb-3">{w.ico}</div>
@@ -314,7 +314,7 @@ export default function HealthPage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-[88px] px-[5%] bg-white">
+      <section className="py-14 md:py-[88px] px-[5%] bg-white">
         <div className="max-w-[700px] mx-auto">
           <Tag color="health">FAQ</Tag>
           <h2 className="font-heading text-[clamp(26px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.8px] text-navy mb-8">Health Insurance FAQs</h2>
@@ -329,7 +329,7 @@ export default function HealthPage() {
             Protect Your Family's Health<br /><span style={{ color: '#38BDF8' }}>From ₹299/Month</span>
           </h2>
           <p className="text-[16px] text-white/[0.65] mb-8">Cashless treatment at 10,000+ hospitals. Instant policy. No paperwork.</p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => router.push('/health/buy')}
               className="inline-flex items-center gap-2 font-heading font-bold rounded-full text-white bg-gradient-to-br from-[#ffc837] to-[#f6462d] py-3.5 px-8 text-[15px] shadow-[0_6px_22px_rgba(246,70,45,0.35)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(246,70,45,0.5)] transition-all border-none cursor-pointer"

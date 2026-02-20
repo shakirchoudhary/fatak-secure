@@ -48,7 +48,7 @@ export default function CalculatorsPage() {
   return (
     <div className="pt-16 bg-slate-50 min-h-screen">
       {/* Header */}
-      <div className="bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] py-20 px-[5%] text-center">
+      <div className="bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] py-12 md:py-20 px-[5%] text-center">
         <div className="flex items-center justify-center gap-2 text-xs text-white/[0.45] mb-4">
           <button onClick={() => router.push('/')} className="hover:text-white/80 bg-transparent border-none cursor-pointer font-body text-white/[0.45]">Home</button>
           <span className="text-white/25">›</span>
@@ -69,7 +69,7 @@ export default function CalculatorsPage() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex-1 py-3 rounded-xl font-heading font-bold text-sm border-none cursor-pointer transition-all duration-200 ${
+              className={`flex-1 py-2.5 sm:py-3 rounded-xl font-heading font-bold text-xs sm:text-sm border-none cursor-pointer transition-all duration-200 ${
                 activeTab === tab.id
                   ? 'bg-navy text-white'
                   : 'bg-transparent text-slate-500 hover:text-navy'
@@ -82,9 +82,9 @@ export default function CalculatorsPage() {
 
         {/* Car Calculator */}
         {activeTab === 'car' && (
-          <div className="bg-white rounded-2xl shadow-s1 p-7 mt-5">
+          <div className="bg-white rounded-2xl shadow-s1 p-5 sm:p-7 mt-5">
             <h2 className="font-heading text-xl font-extrabold text-navy mb-6">Car Insurance Calculator</h2>
-            <div className="grid grid-cols-2 gap-4 mb-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               <div>
                 <label className={labelCls}>Car Type</label>
                 <select className={inputCls} value={carType} onChange={e => setCarType(e.target.value)}>
@@ -166,9 +166,9 @@ export default function CalculatorsPage() {
 
         {/* Bike Calculator */}
         {activeTab === 'bike' && (
-          <div className="bg-white rounded-2xl shadow-s1 p-7 mt-5">
+          <div className="bg-white rounded-2xl shadow-s1 p-5 sm:p-7 mt-5">
             <h2 className="font-heading text-xl font-extrabold text-navy mb-6">Bike Insurance Calculator</h2>
-            <div className="grid grid-cols-2 gap-4 mb-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               <div>
                 <label className={labelCls}>Engine Capacity (CC)</label>
                 <select className={inputCls} value={bikeCC} onChange={e => setBikeCC(Number(e.target.value))}>
@@ -233,9 +233,9 @@ export default function CalculatorsPage() {
 
         {/* Health Calculator */}
         {activeTab === 'health' && (
-          <div className="bg-white rounded-2xl shadow-s1 p-7 mt-5">
+          <div className="bg-white rounded-2xl shadow-s1 p-5 sm:p-7 mt-5">
             <h2 className="font-heading text-xl font-extrabold text-navy mb-6">Health Insurance Calculator</h2>
-            <div className="grid grid-cols-2 gap-4 mb-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               <div>
                 <label className={labelCls}>Plan Type</label>
                 <select className={inputCls} value={hPlan} onChange={e => setHPlan(e.target.value)}>

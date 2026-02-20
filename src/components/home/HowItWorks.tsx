@@ -29,7 +29,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-[88px] px-[5%] bg-white" id="how-home">
+    <section className="py-14 md:py-[88px] px-[5%] bg-white" id="how-home">
       <div className="max-w-[1180px] mx-auto">
         <div className="text-center mb-0">
           <Tag centered noBar>Process</Tag>
@@ -41,9 +41,9 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid grid-cols-4 mt-14 relative">
-          {/* Connector line */}
-          <div className="absolute top-[34px] left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-teal to-orange rounded z-0" />
+        <div className="grid grid-cols-2 md:grid-cols-4 mt-10 md:mt-14 relative gap-y-8 md:gap-y-0">
+          {/* Connector line — desktop only */}
+          <div className="hidden md:block absolute top-[34px] left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-teal to-orange rounded z-0" />
 
           {STEPS.map((step) => (
             <div key={step.n} className="text-center px-4 relative z-10 group">

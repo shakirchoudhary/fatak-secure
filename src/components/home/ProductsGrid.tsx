@@ -51,7 +51,7 @@ export default function ProductsGrid() {
   const router = useRouter()
 
   return (
-    <section className="py-[88px] px-[5%] bg-slate-50" id="home-prods">
+    <section className="py-14 md:py-[88px] px-[5%] bg-slate-50" id="home-prods">
       <div className="max-w-[1180px] mx-auto">
         <div className="text-center mb-[52px]">
           <Tag centered noBar>Our Products</Tag>
@@ -63,7 +63,7 @@ export default function ProductsGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {PRODUCTS.map((product) => {
             const c = colorConfig[product.colorClass]
             return (
