@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </div>
             <button 
-              onClick={() => router.push('/contact')}
+              onClick={() => router.push('/contact-us')}
               className="text-white text-sm font-medium flex items-center gap-2 hover:text-[#00C4B4] transition-colors w-fit"
             >
               <span>☎</span> Contact us
@@ -59,7 +59,7 @@ export default function Footer() {
             <h4 className="font-bold text-sm text-white mb-5 uppercase tracking-wide">Our Company</h4>
             <ul className="space-y-3">
               {[
-                { label: 'About us', href: 'https://fatakpay.com/about' },
+                { label: 'About us', href: '/about-us' },
               ].map((item) => (
                 <li key={item.label}>
                   <a
@@ -80,9 +80,9 @@ export default function Footer() {
             <h4 className="font-bold text-sm text-white mb-5 uppercase tracking-wide">Legal</h4>
             <ul className="space-y-3">
               {[
-                { label: 'Terms & Conditions', href: '#' },
-                { label: 'Privacy Policy', href: '#' },
-                { label: 'Grievance Redressal', href: '#' },
+                { label: 'Terms & Conditions', href: '/terms-conditions' },
+                { label: 'Privacy Policy', href: '/privacy-policy' },
+                { label: 'Grievance Redressal', href: '/grievance-redressal' },
               ].map((item) => (
                 <li key={item.label}>
                   <a 
