@@ -183,7 +183,7 @@ He is a Chartered Accountant and a Graduate in Commerce.`,
 
               <div className="h-0.5 w-12 mb-6 bg-gradient-to-r from-[#ffc837] to-[#f6462d] rounded-sm" />
 
-              <p className="text-slate-600 leading-[1.78] text-[15px] mb-5">
+              <p className="text-slate-600 leading-[1.5] text-justify text-[15px] mb-5">
                 Bikash Choudhary is the CEO &amp; Principal Officer of FatakSecure,
                 with over 22 years of experience in actuarial science, risk
                 management, and product strategy. He has held senior roles at
@@ -240,12 +240,12 @@ He is a Chartered Accountant and a Graduate in Commerce.`,
       {/* ── Team Member Modal ── */}
       {selectedMember && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[350] flex items-center justify-center p-4"
           onClick={() => setSelectedMember(null)}
         >
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
           <div
-            className="relative bg-white rounded-2xl p-5 sm:p-8 md:p-10 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-s3"
+            className="relative bg-white rounded-2xl p-5 sm:p-8 md:p-10 max-w-4xl w-full max-h-[90vh] overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden shadow-s3"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
