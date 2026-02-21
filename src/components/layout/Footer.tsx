@@ -64,7 +64,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    target="_blank"
+                    target=""
                     rel="noopener noreferrer"
                     className="text-[13px] text-white/70 hover:text-[#00C4B4] transition-colors font-normal"
                   >
@@ -80,14 +80,14 @@ export default function Footer() {
             <h4 className="font-bold text-sm text-white mb-5 uppercase tracking-wide">Legal</h4>
             <ul className="space-y-3">
               {[
-                { label: 'Terms & Conditions', href: '/terms-conditions' },
+                { label: 'Terms & Conditions', href: '/terms-and-conditions' },
                 { label: 'Privacy Policy', href: '/privacy-policy' },
                 { label: 'Grievance Redressal', href: '/grievance-redressal' },
               ].map((item) => (
                 <li key={item.label}>
                   <a 
                     href={item.href}
-                    target={item.href !== '#' ? '_blank' : undefined}
+                    target={item.href !== '#' ? '' : undefined}
                     rel={item.href !== '#' ? 'noopener noreferrer' : undefined}
                     className="text-[13px] text-white/70 hover:text-[#00C4B4] transition-colors font-normal"
                   >

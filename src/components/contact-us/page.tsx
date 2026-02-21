@@ -1,70 +1,60 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
-import { contactUsBgImage, homeUI2Image, supportIcon } from "@/assets";
+import React, { useState } from 'react'
+import Image from 'next/image'
+import { Mail, Phone } from 'lucide-react'
+import { supportIcon } from '@/assets'
+import Tag from '@/components/ui/Tag'
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    mobile: "",
-    message: "",
-  });
-
-  const [selectedOffice, setSelectedOffice] = useState(0);
+    fullName: '',
+    email: '',
+    mobile: '',
+    message: '',
+  })
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-  };
+    e.preventDefault()
+    console.log('Form submitted:', formData)
+  }
 
   return (
     <>
-      <div className="w-full left-0 -z-10 min-h-[calc(100dvh-48px)] md:min-h-[calc(100dvh-100px)] h-full bg-[#FFFBF0] absolute" />
-      <section className="w-full bg-[#FFFBF0] md:py-16 py-10 px-4">
-        <Image
-          src={contactUsBgImage}
-          alt="Contact Us Background 1"
-          priority
-          className="absolute top-2 hidden md:block left-0 z-0"
-        />
-        <Image
-          src={contactUsBgImage}
-          alt="Contact Us Background 1"
-          priority
-          className="absolute top-2 hidden md:block   right-0 z-0 scale-x-[-1]"
-        />
-        <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
-          <div className="text-center mb-10 md:mb-25">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              We'd love to{" "}
-              <span className="text-fatak-primary">hear from you</span>
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Fill the form below to drop us an email.
-            </p>
-          </div>
+      {/* ── Hero ── */}
+      <section className="pt-20 pb-14 md:pt-28 md:pb-20 px-[5%] text-center bg-gradient-to-br from-[#2d1057] via-[#44226e] to-[#6b3fa0] relative overflow-hidden">
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[640px] h-[320px] bg-[radial-gradient(ellipse,rgba(0,196,180,0.13),transparent_70%)] pointer-events-none" />
+        <div className="absolute bottom-0 right-[10%] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(246,70,45,0.08),transparent_65%)] pointer-events-none" />
+        <div className="relative z-10">
+          <Tag color="teal" centered>Get In Touch</Tag>
+          <h1 className="font-heading text-[clamp(32px,4vw,52px)] font-extrabold tracking-[-0.8px] text-white mt-1">
+            We&apos;d love to{' '}
+            <span className="text-teal-light">hear from you</span>
+          </h1>
+          <p className="text-white/60 mt-3 text-base leading-[1.78]">
+            Fill the form below to drop us an email.
+          </p>
+        </div>
+      </section>
 
-          {/* Contact Form and Info Section */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start md:mb-16 bg-white md:p-12 p-4 rounded-3xl shadow-sm z-10 relative">
-            {/* Contact Form */}
-            <div className="order-2 md:order-1">
-              <form onSubmit={handleSubmit} className="space-y-6">
+      {/* ── Form + Info ── */}
+      <section className="py-14 md:py-20 px-[5%] bg-slate-50">
+        <div className="max-w-[1180px] mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-10 items-start bg-white rounded-2xl p-6 md:p-12 shadow-s2 border border-slate-100">
+
+            {/* ── Contact Form ── */}
+            <div className="order-2 lg:order-1">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">
-                    Full Name <span className="text-red-500">*</span>
+                  <label className="block text-navy font-heading font-semibold text-[14px] mb-2">
+                    Full Name <span className="text-orange">*</span>
                   </label>
                   <input
                     type="text"
@@ -72,14 +62,14 @@ const ContactUs = () => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     placeholder="Enter your full name here"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-fatak-primary focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-[14px] text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44226e]/30 focus:border-[#44226e] transition-colors"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">
-                    Email Address <span className="text-red-500">*</span>
+                  <label className="block text-navy font-heading font-semibold text-[14px] mb-2">
+                    Email Address <span className="text-orange">*</span>
                   </label>
                   <input
                     type="email"
@@ -88,14 +78,14 @@ const ContactUs = () => {
                     onChange={handleInputChange}
                     placeholder="you@example.com"
                     pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-fatak-primary focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-[14px] text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44226e]/30 focus:border-[#44226e] transition-colors"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">
-                    Mobile Number <span className="text-red-500">*</span>
+                  <label className="block text-navy font-heading font-semibold text-[14px] mb-2">
+                    Mobile Number <span className="text-orange">*</span>
                   </label>
                   <input
                     type="tel"
@@ -105,14 +95,14 @@ const ContactUs = () => {
                     placeholder="98XXXXXXXX"
                     pattern="^[6-9]\d{9}$"
                     title="Please enter a valid 10-digit Indian mobile number starting with 6-9"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-fatak-primary focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-[14px] text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44226e]/30 focus:border-[#44226e] transition-colors"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">
-                    Message <span className="text-red-500">*</span>
+                  <label className="block text-navy font-heading font-semibold text-[14px] mb-2">
+                    Message <span className="text-orange">*</span>
                   </label>
                   <textarea
                     name="message"
@@ -120,56 +110,62 @@ const ContactUs = () => {
                     onChange={handleInputChange}
                     placeholder="Write your message here"
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-fatak-primary focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-[14px] text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44226e]/30 focus:border-[#44226e] transition-colors resize-none"
                     required
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-linear-to-r from-fatak-secondary to-fatak-secondary-light hover:from-orange-600 hover:to-yellow-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+                  className="w-full bg-gradient-to-r from-[#ffc837] to-[#f6462d] text-white font-heading font-bold py-3.5 px-6 rounded-full shadow-orange hover:shadow-orange-hover hover:-translate-y-0.5 transition-all duration-200 text-[15px]"
                 >
                   Submit
                 </button>
               </form>
             </div>
 
-            {/* Contact Info Side */}
-            <div className="space-y-6 order-1 md:order-2">
-              {/* Illustration Placeholder */}
-              <div className="flex justify-center mb-8">
+            {/* ── Contact Info ── */}
+            <div className="space-y-4 md:space-y-6 order-1 lg:order-2">
+              {/* Illustration */}
+              <div className="flex justify-center">
                 <Image
                   src={supportIcon}
-                  alt="support illustration"
+                  alt="Support illustration"
                   width={300}
-                  height={200}
+                  height={220}
+                  className="w-full max-w-[190px] sm:max-w-[240px] md:max-w-[300px] h-auto object-contain"
                 />
               </div>
+
               {/* Contact Cards */}
-              <div className="grid grid-cols-2 rounded-xl gap-4 bg-fatak-primary-bg p-5">
-                {/* Contact Number Card */}
-                <div className="md:p-6 text-center">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm">
-                    <Phone className="w-6 h-6 text-purple-600" />
+              <div className="grid grid-cols-2 gap-4 bg-[#44226e]/[0.06] rounded-2xl p-5">
+                {/* Phone */}
+                <div className="text-center py-4">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-s1">
+                    <Phone className="w-5 h-5 text-[#44226e]" />
                   </div>
-                  <h5 className="font-bold md:text-sm text-[12px] text-gray-800 mb-2">Contact No</h5>
-                  <a 
+                  <h5 className="font-heading font-bold text-[13px] text-navy mb-1.5">
+                    Contact No
+                  </h5>
+                  <a
                     href="tel:+919619476476"
-                    className="text-gray-600 md:text-sm text-[12px] hover:text-purple-600 transition-colors"
+                    className="text-slate-500 text-[13px] hover:text-[#44226e] transition-colors"
                   >
                     +91 96194 76476
                   </a>
                 </div>
 
-                {/* Mail Us Card */}
-                <div className="md:p-6 text-center">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm">
-                    <Mail className="w-6 h-6 text-purple-600" />
+                {/* Email */}
+                <div className="text-center py-4">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-s1">
+                    <Mail className="w-5 h-5 text-[#44226e]" />
                   </div>
-                  <h5 className="font-bold md:text-sm text-[12px] text-gray-800 mb-2">Mail Us</h5>
+                  <h5 className="font-heading font-bold text-[13px] text-navy mb-1.5">
+                    Mail Us
+                  </h5>
                   <a
                     href="mailto:support@fataksecure.com"
-                    className="text-gray-600 md:text-sm text-[12px] hover:text-purple-600 transition-colors"
+                    className="text-slate-500 text-[13px] hover:text-[#44226e] transition-colors break-all"
                   >
                     support@fataksecure.com
                   </a>
@@ -180,7 +176,7 @@ const ContactUs = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default ContactUs;
+export default ContactUs
